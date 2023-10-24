@@ -1,0 +1,129 @@
+import html from "../assets/tools/icons8-html-480.png";
+import css from "../assets/tools/icons8-css-480.png";
+import js from "../assets/tools/icons8-js-480.png";
+import react from "../assets/tools/icons8-react-native-480.png";
+import tailwind from "../assets/tools/icons8-tailwindcss-480.png";
+import node from "../assets/tools/icons8-node-js-480.png";
+import mongodb from "../assets/tools/icons8-mongodb.png";
+import figma from "../assets/tools/icons8-figma-480.png";
+import flutter from "../assets/tools/icons8-flutter-480.png";
+import dart from "../assets/tools/icons8-dart-480.png";
+import express from "../assets/tools/icons8-express-js-480.png";
+import { useRef } from "react";
+import { motion, useTransform, useScroll } from "framer-motion";
+
+const Toolscomponent = () => {
+  const skillref0 = useRef();
+  const skillref1 = useRef();
+  const skillref2 = useRef();
+  const skillref3 = useRef();
+  const skillref4 = useRef();
+  const skillref5 = useRef();
+  const skillref6 = useRef();
+  const skillref7 = useRef();
+  const skillref8 = useRef();
+  const skillref9 = useRef();
+  const skillref10 = useRef();
+  const toolslist = [
+    {
+      image: figma,
+      name: "figma",
+      reference: skillref0,
+    },
+
+    {
+      image: html,
+      name: "html",
+      reference: skillref1,
+    },
+    {
+      image: css,
+      name: "css",
+      reference: skillref2,
+    },
+    {
+      image: js,
+      name: "javascript",
+      reference: skillref3,
+    },
+    {
+      image: react,
+      name: "reactjs",
+      reference: skillref4,
+    },
+    {
+      image: tailwind,
+      name: "tailwlindcss",
+      reference: skillref5,
+    },
+    {
+      image: node,
+      name: "nodejs",
+      reference: skillref6,
+    },
+    {
+      image: mongodb,
+      name: "mongodb",
+      reference: skillref7,
+    },
+    {
+      image: express,
+      name: "expressjs",
+      reference: skillref8,
+    },
+    {
+      image: flutter,
+      name: "flutter",
+      reference: skillref9,
+    },
+    {
+      image: dart,
+      name: "dart",
+      reference: skillref10,
+    },
+  ];
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
+
+  const x = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["1%", window.innerWidth > 768 ? "-67%" : "-88%"]
+  );
+  console.log("scrollyprogess", scrollYProgress);
+  console.log("x", x);
+  return (
+    <div>
+      <div className="  h-[300vh] " ref={targetRef}>
+        <p className=" text-9xl font-bold capitalize tracking-tighter ">
+          tools i use :{" "}
+        </p>
+
+        <div className="sticky top-28 flex  items-center overflow-hidden">
+          <motion.div style={{ x: x }} className="  flex my-20 w-fit">
+            {toolslist.map((item, i) => {
+              return (
+                <>
+                  <div
+                    className="section bg-gradient-to-tr from-[#0a0a0bcf] to-[#30333be0] xl:w-[400px] xl:h-[400px] w-[350px] h-[350px] mx-2 mb-5 flex flex-col items-center rounded-md"
+                    ref={item.reference}
+                    key={i}
+                  >
+                    <div className=" w-[300px] h-[300px]">
+                      <img src={item.image} alt="" className=" w-[90%]" />
+                    </div>
+                    <p>{item.name}</p>
+                  </div>
+                </>
+              );
+            })}
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Toolscomponent;
