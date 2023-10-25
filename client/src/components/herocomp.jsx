@@ -105,7 +105,7 @@ const Herocomp = () => {
         <img
           src={amine1}
           style={{}}
-          className={` z-[0] absolute left-1/2 translate-x-[-52%]  image w-[490px]  `}
+          className={` z-[0] absolute left-1/2 translate-x-[-52%] top-16 sm:top-0  image sm:w-[490px] w-[450px] transition-all`}
           alt=""
         />
         <div className=" relative flex pb-[40px]  flex-col items-center place-content-end h-[90vh]  ">
@@ -120,7 +120,7 @@ const Herocomp = () => {
                 transform: `translate(${xPos}px, ${yPos}px)`,
               }}
               ref={contactbutton}
-              className=" absolute top-[140px] right-5 sm:left-[60%] h-[200px] w-[200px]  sm:h-[180px] sm:w-[180px] bg-[#141517] text-white rounded-full text-lg"
+              className=" absolute top-[150px] right-5 sm:left-[60%] h-[150px] w-[150px]  sm:h-[180px] sm:w-[180px] bg-[#141517] text-white rounded-full text-lg"
             >
               Lets Work
             </button>

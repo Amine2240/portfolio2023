@@ -18,14 +18,17 @@ const Navbar = () => {
   // );
   const navelements = [
     {
+      id: 0,
       name: "work",
       link: "work",
     },
     {
+      id: 1,
       name: "about",
       link: "about",
     },
     {
+      id: 2,
       name: "contact",
       link: "contact",
     },
@@ -98,7 +101,7 @@ const Navbar = () => {
           return (
             <>
               <li
-                key={i}
+                key={item.id}
                 onClick={() => {
                   navigateTo(`${item.link}`);
                   // setindex(i);

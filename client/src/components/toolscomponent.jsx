@@ -82,6 +82,7 @@ const Toolscomponent = () => {
       reference: skillref10,
     },
   ];
+
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -92,8 +93,8 @@ const Toolscomponent = () => {
     [0, 1],
     ["1%", window.innerWidth > 768 ? "-67%" : "-88%"]
   );
-  console.log("scrollyprogess", scrollYProgress);
-  console.log("x", x);
+  // console.log("scrollyprogess", scrollYProgress);
+  // console.log("x", x);
   return (
     <div>
       <div className="  h-[300vh] " ref={targetRef}>
@@ -107,14 +108,16 @@ const Toolscomponent = () => {
               return (
                 <>
                   <div
-                    className="section bg-gradient-to-tr from-[#0a0a0bcf] to-[#30333be0] xl:w-[400px] xl:h-[400px] w-[350px] h-[350px] mx-2 mb-5 flex flex-col items-center rounded-md"
+                    className="section bg-gradient-to-tr from-[#15242ccf] to-[#3f4f7b] xl:w-[400px] xl:h-[400px] w-[350px] h-[350px] mx-2 mb-5 flex flex-col items-center rounded-md"
                     ref={item.reference}
                     key={i}
                   >
-                    <div className=" w-[300px] h-[300px]">
+                    <div className=" w-[300px] h-[300px] ml-5">
                       <img src={item.image} alt="" className=" w-[90%]" />
                     </div>
-                    <p>{item.name}</p>
+                    <p className=" text-3xl text-white capitalize">
+                      {item.name}
+                    </p>
                   </div>
                 </>
               );

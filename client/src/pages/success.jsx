@@ -4,6 +4,9 @@ import Minifooter from "../components/minifooter";
 import { useState, useEffect } from "react";
 import { hoverfunction } from "../components/hoverfunction";
 import { useNavigate } from "react-router-dom";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 // eslint-disable-next-line react/prop-types
 const Success = ({ navbar2bool }) => {
   const button = useRef();
@@ -13,8 +16,27 @@ const Success = ({ navbar2bool }) => {
   useEffect(() => {
     hoverfunction(button, setxPos, setyPos);
   }, []);
+  useEffect(() => {
+    console.log("navbar2", navbar2bool);
+  }, [navbar2bool]);
   console.log("navbar2", navbar2bool);
   const navigateTo = useNavigate();
+
+  useEffect(() => {
+    gsap.fromTo(
+      ".buttonref",
+      {
+        x: -250,
+
+      },
+      {
+        ease: "back.out(1)",
+        delay: 0.35,
+        duration : 0.7,
+        x: 0,
+      }
+    );
+  }, []);
   return (
     <div
       className={` bg-[#1C1D20] ${
@@ -30,7 +52,7 @@ const Success = ({ navbar2bool }) => {
         </div>
         <section className=" relative flex place-content-end">
           <button
-            className="  sm:h-[200px] sm:w-[200px] h-[170px] w-[170px]  bg-red-500 rounded-full z-10 ml-10 text-xl mr-40"
+            className="  sm:h-[200px] sm:w-[200px] h-[170px] w-[170px]  bg-red-500 rounded-full z-10 ml-10 text-xl mr-40 buttonref"
             ref={button}
             style={{
               transform: `translate(${xPos}px, ${yPos}px)`,

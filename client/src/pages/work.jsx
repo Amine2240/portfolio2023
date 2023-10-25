@@ -8,7 +8,7 @@ import Footer from "../components/footer";
 import Transition from "../../transition";
 import { Works } from "../components/works";
 import { hoverfunction } from "../components/hoverfunction";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Workschema from "../components/workschema";
 
 const Work = () => {
@@ -102,23 +102,6 @@ const Work = () => {
   const containerref = useRef();
   const visitref = useRef();
 
-  // useEffect(() => {
-  //   const myallworks = gsap.utils.toArray(".mywork");
-  //   gsap.to(
-  //     myallworks,
-
-  //     {
-  //       y: -150,
-
-  //       ease: "none",
-  //       stagger: -0.15,
-  //       scrollTrigger: {
-  //         scrub: 1,
-  //       },
-  //     }
-  //   );
-  // }, []);
-
   useEffect(() => {
     gsap.fromTo(
       visitref.current,
@@ -156,20 +139,6 @@ const Work = () => {
     });
   }, []);
 
-  // useEffect(() => {
-  //   gsap.to(containerref.current, {
-  //     height: 950,
-  //     duration: 0.3,
-  //     scrollTrigger: {
-  //       trigger: containerref.current,
-  //       start: "20% 40%",
-  //       end: "55% 25%",
-  //       // markers: true,
-  //       scrub: 2,
-  //     },
-  //   });
-  // }, []);
-
   return (
     <ReactLenis root>
       <div className="">
@@ -182,14 +151,15 @@ const Work = () => {
               return (
                 <>
                   <button
+                  key={item.id}
                     onClick={() => {
                       // navigateTo("/contact");
                       setindex(item.id);
                     }}
-                    className="h-[70px] w-[100px]  rounded-[50px] mb-5 border border-red-500"
+                    className="h-[70px] w-[120px] mx-2  rounded-[50px] mb-5 border-2 border-black"
                     style={{
                       transform: `translate(${item.x}px, ${item.y}px)`,
-                      backgroundColor: index == item.id ? "red" : "transparent",
+                      backgroundColor: index == item.id ? "black" : "transparent",
                       color: index == item.id ? "white" : "black",
                     }}
                     ref={item.reference}
@@ -204,36 +174,34 @@ const Work = () => {
             className="flex flex-wrap place-content-around items-end "
             ref={containerref}
           >
-            <AnimatePresence>
-              {workstoappear.map((item) => {
-                return (
-                  <>
-                    <motion.div
-                      initial={{
-                        opacity: 0,
-                        translateY: 20,
-                      }}
-                      animate={{
-                        opacity: 1,
-                        translateY: 0,
-                      }}
-                      exit={{
-                        opacity: 0,
-                        translateY: 0,
-                      }}
-                      transition={{
-                        duration: 0.5,
-                      }}
-                      ref={item?.reference}
-                      className=" sm:mb-20 my-10 mywork"
-                      key={item.id}
-                    >
-                      <Workschema item={item} />
-                    </motion.div>
-                  </>
-                );
-              })}
-            </AnimatePresence>
+            {workstoappear.map((item) => {
+              return (
+                <>
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                      translateY: 20,
+                    }}
+                    animate={{
+                      opacity: 1,
+                      translateY: 0,
+                    }}
+                    exit={{
+                      opacity: 0,
+                      translateY: 0,
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
+                    ref={item?.reference}
+                    className=" sm:mb-20 my-10 mywork"
+                    key={item.id}
+                  >
+                    <Workschema item={item} />
+                  </motion.div>
+                </>
+              );
+            })}
           </div>
 
           <a
@@ -243,7 +211,7 @@ const Work = () => {
           >
             <button
               ref={visitref}
-              className="h-[90px] w-[200px] bg-red-500 rounded-[50px]"
+              className="h-[90px] w-[200px] bg-white text-black border border-black rounded-[50px]"
               style={{
                 transform: `translate(${xPos}px, ${yPos}px)`,
               }}

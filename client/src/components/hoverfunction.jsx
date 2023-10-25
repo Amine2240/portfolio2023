@@ -7,7 +7,7 @@ export const hoverfunction = (button, setxPos, setyPos) => {
 
   button?.current?.addEventListener("mousemove", (e) => {
     const hoverbutton = e.target;
-    const buttonrect = hoverbutton.getBoundingClientRect();
+    const buttonrect = hoverbutton?.getBoundingClientRect();
     const centerx = buttonrect.left + buttonrect.width / 2;
     const centery = buttonrect.top + buttonrect.height / 2;
     // setxPos((e.clientX - e.target.offsetWidth) / 20);

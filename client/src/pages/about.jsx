@@ -25,7 +25,7 @@ const About = () => {
       scrollTrigger: {
         trigger: dahoudivref.current,
         scrub: 1,
-        start: "top 80%",
+        start: "top top",
         end: "bottom top",
       },
     });
@@ -35,7 +35,7 @@ const About = () => {
       scrollTrigger: {
         trigger: eticdivref.current,
         scrub: 1,
-        start: "top 80%",
+        start: "top bottom",
         end: "bottom top",
       },
     });
@@ -53,9 +53,14 @@ const About = () => {
         // },
       },
       {
-        delay: 0.2,
+        delay: 0.1,
         y: 0,
         opacity: 1,
+        scrollTrigger: {
+          trigger: ".aboutme1",
+          start: "top bottom",
+          end: "bottom top",
+        },
       }
     );
     const mytext2 = new SplitType(".aboutme2");
@@ -78,7 +83,6 @@ const About = () => {
       }
     );
   }, []);
-  // console.log("skilldevref", skilldivref);
 
   return (
     <ReactLenis root>

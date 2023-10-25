@@ -38,11 +38,12 @@ const Navbar2 = ({ navbar2bool, setnavbar2bool }) => {
     const mytext = new SplitType(".mytext");
     gsap.from(mytext.chars, {
       y: 100,
-      opacity: 0,
+      opacity: 0.3,
       delay: 0.2,
       stagger: 0.05,
-      ease: "back.out(1)",
+      // ease: "back.out(1)",
       scrollTrigger: {
+        trigger : navref0.current ,
         // trigger: !navbar2bool ? mytext : "",
         // markers: true,
       },
@@ -54,16 +55,19 @@ const Navbar2 = ({ navbar2bool, setnavbar2bool }) => {
   const navref3 = useRef();
   const navelements = [
     {
+      id : 0,
       name: "work",
       reference: navref1,
       link: "work",
     },
     {
+      id : 1,
       name: "about",
       reference: navref2,
       link: "about",
     },
     {
+       id : 2,
       name: "contact",
       reference: navref3,
       link: "contact",
@@ -143,7 +147,7 @@ const Navbar2 = ({ navbar2bool, setnavbar2bool }) => {
                   }}
                   className=" capitalize navref0  mytext   font-bold group"
                   ref={item.reference}
-                  key={i}
+                  key={item.id}
                 >
                   <p
                     className={`mylabel cursor-pointer tracking-tighter font-bold text-8xl hover:text-red-500 `}

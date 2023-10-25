@@ -135,20 +135,20 @@ const Footer = () => {
           <path
             d="M70 38L2 38"
             stroke="white"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             d="M71 38L31 1.99999"
             stroke="white"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             d="M71 38L31 75"
             stroke="white"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
         </svg>
 

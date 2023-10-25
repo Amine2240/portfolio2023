@@ -39,7 +39,7 @@ const Workschema = ({ item }) => {
       </a>
       <p className=" text-4xl capitalize mt-5">{item.title}</p>
       <div className=" h-[1.5px] w-full bg-gray-200 my-5"></div>
-      <div className=" flex place-content-between">
+      <div className=" flex place-content-between text-xl">
         <a href={item.codelink} target="_blank">
           <button>view code</button>
         </a>
