@@ -102,21 +102,21 @@ const Work = () => {
   const containerref = useRef();
   const visitref = useRef();
 
-  useEffect(() => {
-    gsap.fromTo(
-      visitref.current,
-      {
-        y: 0,
-      },
-      {
-        y: -100,
-        scrollTrigger: {
-          scrub: 1,
-          trigger: visitref.current,
-        },
-      }
-    );
-  }, []);
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     visitref.current,
+  //     {
+  //       y: 0,
+  //     },
+  //     {
+  //       y: -100,
+  //       scrollTrigger: {
+  //         scrub: 1,
+  //         trigger: visitref.current,
+  //       },
+  //     }
+  //   );
+  // }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -156,7 +156,7 @@ const Work = () => {
                       // navigateTo("/contact");
                       setindex(item.id);
                     }}
-                    className="h-[70px] w-[120px] mx-2  rounded-[50px] mb-5 border-2 border-black"
+                    className="h-[70px] w-[120px] mx-2  rounded-[50px] mb-5 border border-black"
                     style={{
                       transform: `translate(${item.x}px, ${item.y}px)`,
                       backgroundColor: index == item.id ? "black" : "transparent",
@@ -211,7 +211,7 @@ const Work = () => {
           >
             <button
               ref={visitref}
-              className="h-[90px] w-[200px] bg-white text-black border border-black rounded-[50px]"
+              className="h-[90px] w-[200px] bg-white text-black border border-black rounded-[50px] mb-10"
               style={{
                 transform: `translate(${xPos}px, ${yPos}px)`,
               }}

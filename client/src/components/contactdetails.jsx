@@ -27,7 +27,7 @@ const Contactdetails = () => {
     <>
       <ul
         ref={contactref}
-        className="  flex flex-col h-[600px]  place-content-around flex-wrap  xl:fixed sm:top-20 sm:right-0  xl:w-[400px] w-full "
+        className="  flex xl:flex-col xl:h-[600px] md:h-[200px]  place-content-around flex-wrap  xl:fixed sm:top-20 sm:right-0  xl:w-[400px] md:w-full w-[90%]"
       >
         <div className=" h-28 w-28 mx-auto bg-[#335e79] rounded-full overflow-hidden mb-5">
           <img
@@ -36,11 +36,11 @@ const Contactdetails = () => {
             className=" translate-y-1 scale-110 w-full"
           />
         </div>
-        <li className=" ">
+        <li className="">
           <span className=" capitalize text-lg text-gray-500">
             contact details
           </span>
-          <li className=" flex place-content-between text-2xl  mt-3">
+          <li className=" flex place-content-between text-2xl  mt-3 sm:mr-3">
             <p>kadoumamine@gmail.com</p>
           </li>
         </li>
@@ -48,7 +48,11 @@ const Contactdetails = () => {
           <span className=" capitalize text-lg text-gray-500">
             digital spaces
           </span>
-          <a target="_blank" href="https://www.linkedin.com/in/amine-kadoum-4a885b272/" rel="noreferrer">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/amine-kadoum-4a885b272/"
+            rel="noreferrer"
+          >
             <li className=" flex place-content-start flex-row-reverse text-2xl  mt-3">
               <p className=" ml-2 mb-1">Linkedin</p>{" "}
               <svg
@@ -101,7 +105,10 @@ const Contactdetails = () => {
               </svg>
             </li>
           </a>
-          <a target="_blank" href="https://www.facebook.com/amine.kadoum.3?locale=fr_FR">
+          <a
+            target="_blank"
+            href="https://www.facebook.com/amine.kadoum.3?locale=fr_FR"
+          >
             <li className=" flex place-content-start flex-row-reverse text-2xl ">
               <p className=" ml-2 mb-1">Facebook</p>{" "}
               <svg

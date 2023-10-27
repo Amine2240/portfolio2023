@@ -19,7 +19,7 @@ const About = () => {
   const dahoudivref = useRef();
   useEffect(() => {
     gsap.to(dahoudivref.current, {
-      scale: "1.35",
+      scale: "1.25",
       duration: 0.3,
       delay: 0.05,
       scrollTrigger: {
@@ -30,7 +30,7 @@ const About = () => {
       },
     });
     gsap.to(eticdivref.current, {
-      scale: "1.35",
+      scale: "1.25",
       duration: 0.3,
       scrollTrigger: {
         trigger: eticdivref.current,

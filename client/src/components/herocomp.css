@@ -24,6 +24,40 @@ body {
 
 }
 
+.letswork {
+  overflow: hidden;
+}
+
+.letswork::after {
+  content: '';
+  height: 185px;
+  width: 185px;
+  background-color: 3C6E71;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  z-index: -1;
+  transform: translate(70px);
+  transition: all ease 0.5s;
+
+}
+
+.letswork:hover::after {
+  content: '';
+  height: 180px;
+  width: 180px;
+  background-color: #294f51;
+  position: absolute;
+  top: 00px;
+  left: 0px;
+  border-radius: 100%;
+  transform: translate(00px,00px);
+  z-index: -1;
+  transition: all ease 0.5s;
+
+}
+
 /* .ka,
 .ack {
   color: rgba(255, 255, 255, 0.948);

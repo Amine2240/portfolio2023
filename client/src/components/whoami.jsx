@@ -35,10 +35,10 @@ const Whoami = () => {
       tl.fromTo(
         moremebutton.current,
         {
-          y: -20,
+          y: 0,
         },
         {
-          y: -100,
+          y: -150,
           scrollTrigger: {
             trigger: moremebutton.current,
             start: "top bottom",

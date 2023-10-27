@@ -41,9 +41,9 @@ const Workschema = ({ item }) => {
       <div className=" h-[1.5px] w-full bg-gray-200 my-5"></div>
       <div className=" flex place-content-between text-xl">
         <a href={item.codelink} target="_blank">
-          <button>view code</button>
+          <button className=" ">View code</button>
         </a>
-        <p>2023</p>
+        <p>{item.year}</p>
       </div>
     </div>
   );

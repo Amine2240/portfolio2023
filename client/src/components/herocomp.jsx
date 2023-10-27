@@ -63,7 +63,7 @@ const Herocomp = () => {
     const hours = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
     const minutes =
       now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
-    settime(hours + ":" + minutes + `${hours < 12 ? "AM" : 'PM'}`);
+    settime(hours + ":" + minutes + `${hours < 12 ? "AM" : "PM"}`);
     setTimeout(() => {
       gettime();
     }, 1000);
@@ -120,15 +120,15 @@ const Herocomp = () => {
                 transform: `translate(${xPos}px, ${yPos}px)`,
               }}
               ref={contactbutton}
-              className=" absolute top-[150px] right-5 sm:left-[60%] h-[150px] w-[150px]  sm:h-[180px] sm:w-[180px] bg-[#141517] text-white rounded-full text-lg"
+              className=" absolute top-[150px] right-5 sm:left-[60%] h-[150px] w-[150px]  sm:h-[180px] sm:w-[180px] bg-[#141517] text-white rounded-full text-lg letswork "
             >
-              Lets Work
+              <p className=" z-30">Lets Work</p>
             </button>
           </a>
           <p className="absolute capitalize sm:top-[200px] top-[190px] left-4 xl:left-[400px] md:left-[150px] text-xl sm:text-2xl z-10 time text-white">
             local time <br />
             {time}
-            <span className=" tracking-tighter">  GMT+1</span>{" "}
+            <span className=" tracking-tighter"> GMT+1</span>{" "}
           </p>
           <p className="capitalize font-semibold xl:text-[7em] md:text-[5em] text-[55px] z-10 name">
             {" "}
