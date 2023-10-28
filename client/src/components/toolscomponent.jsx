@@ -106,10 +106,8 @@ const Toolscomponent = () => {
   const x = useTransform(
     scrollYProgress,
     [0, 1],
-    ["1%", window.innerWidth > 768 ? "-72%" : "-90%"]
+    ["1%", window.innerWidth > 768 ? "-72%" : "-91%"]
   );
-  // console.log("scrollyprogess", scrollYProgress);
-  // console.log("x", x);
   return (
     <div>
       <div className="  h-[300vh] " ref={targetRef}>
@@ -123,7 +121,7 @@ const Toolscomponent = () => {
               return (
                 <>
                   <div
-                    className="section bg-gradient-to-tr from-[#15242ccf] to-[#3f4f7b] xl:w-[400px] xl:h-[400px] w-[350px] h-[350px] mx-2 mb-5 flex flex-col items-center rounded-md"
+                    className="section bg-gradient-to-tr from-[#15242ccf] to-[#3f4f7b] xl:w-[400px] xl:h-[400px] w-[380px] h-[380px] mx-2 mb-5 flex flex-col items-center rounded-md"
                     ref={item.reference}
                     key={i}
                   >

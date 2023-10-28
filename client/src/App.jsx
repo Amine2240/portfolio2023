@@ -16,16 +16,10 @@ const Home = lazy(() => import("./pages/home"));
 const Contact = lazy(() => import("./pages/contact"));
 const Work = lazy(() => import("./pages/work"));
 const About = lazy(() => import("./pages/about"));
+const Success = lazy(() => import("./pages/success"));
+const Notfound = lazy(() => import("./pages/notfound"));
 import { hoverfunction } from "./components/hoverfunction";
-import Success from "./pages/success";
-import Notfound from "./pages/notfound";
-// import MouseFollower from "mouse-follower";
-// import gsap from "gsap";
-// // MouseFollower.registerGSAP(gsap);
-// // const cursor = new MouseFollower({
-// //   container: document.body,
-// //   speed: 0.3,
-// // });
+
 function App() {
   const [scrollyvalue, setscrollyvalue] = useState(0);
   const [navbar2bool, setnavbar2bool] = useState(false);
