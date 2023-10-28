@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import hoverReducer from "./hoverslice";
-import indexReducer from "./navbarindex";
+import successReducer from "./successSlice";
 
 export const store = configureStore({
   reducer: {
     hoverbooleen: hoverReducer,
-    navbarindex: indexReducer,
+    successbooleen: successReducer,
   },
 });

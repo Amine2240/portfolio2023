@@ -8,14 +8,11 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import SplitType from "split-type";
 // import { memo } from "react";
-import { useDispatch } from "react-redux";
-import { setnavbarindex } from "../redux/navbarindex";
 import { useLocation } from "react-router-dom";
 import Minifooter from "./minifooter";
 
 // eslint-disable-next-line react/prop-types
 const Navbar2 = ({ navbar2bool, setnavbar2bool }) => {
-  const dispatch = useDispatch();
   const navigateTo = useNavigate();
   const [scrollboolen, setscrollboolen] = useState(true);
   const navbar2 = useRef();
@@ -43,7 +40,7 @@ const Navbar2 = ({ navbar2bool, setnavbar2bool }) => {
       stagger: 0.05,
       // ease: "back.out(1)",
       scrollTrigger: {
-        trigger : navref0.current ,
+        trigger: navref0.current,
         // trigger: !navbar2bool ? mytext : "",
         // markers: true,
       },
@@ -55,19 +52,19 @@ const Navbar2 = ({ navbar2bool, setnavbar2bool }) => {
   const navref3 = useRef();
   const navelements = [
     {
-      id : 0,
+      id: 0,
       name: "work",
       reference: navref1,
       link: "work",
     },
     {
-      id : 1,
+      id: 1,
       name: "about",
       reference: navref2,
       link: "about",
     },
     {
-       id : 2,
+      id: 2,
       name: "contact",
       reference: navref3,
       link: "contact",
@@ -117,7 +114,6 @@ const Navbar2 = ({ navbar2bool, setnavbar2bool }) => {
         <ul className=" flex flex-col place-content-around items-center">
           <li
             onClick={() => {
-              dispatch(setnavbarindex(-1));
               setnavbar2bool(false);
               navigateTo("/");
               // setindex(-1);
@@ -133,13 +129,12 @@ const Navbar2 = ({ navbar2bool, setnavbar2bool }) => {
             </p>
             <div className=" h-1 w-0 rounded-full bg-white group-hover:w-full transition-all duration-150"></div>
           </li>
-          {navelements.map((item, i) => {
+          {navelements.map((item) => {
             return (
               <>
                 <li
                   onClick={() => {
                     navigateTo(`${item.link}`);
-                    dispatch(setnavbarindex(i));
                     setnavbar2bool(false);
                   }}
                   style={{

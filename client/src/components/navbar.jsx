@@ -1,13 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import "./navbar.css";
 import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { setnavbarindex } from "../redux/navbarindex";
 import { useLocation } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
 const Navbar = () => {
   const navigateTo = useNavigate();
-  const dispatch = useDispatch();
   const [scrollboolen, setscrollboolen] = useState(true);
   const location = useLocation();
   const { pathname } = location;
@@ -83,7 +80,6 @@ const Navbar = () => {
         onClick={() => {
           navigateTo("/");
           // setindex(-1);
-          dispatch(setnavbarindex(-1));
         }}
         className=" capitalize  font-medium text-2xl mylabel  cursor-pointer ml-5"
         style={{
@@ -97,7 +93,7 @@ const Navbar = () => {
       </p>
 
       <ul className=" flex  w-[300px] place-content-around mr-5  ">
-        {navelements.map((item, i) => {
+        {navelements.map((item) => {
           return (
             <>
               <li
@@ -105,7 +101,6 @@ const Navbar = () => {
                 onClick={() => {
                   navigateTo(`${item.link}`);
                   // setindex(i);
-                  dispatch(setnavbarindex(i));
                 }}
               >
                 <p

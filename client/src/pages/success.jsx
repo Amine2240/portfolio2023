@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
+import { useDispatch } from "react-redux";
+import { setsuccessbooleen } from "../redux/successSlice";
 // eslint-disable-next-line react/prop-types
 const Success = ({ navbar2bool }) => {
   const button = useRef();
@@ -24,16 +26,17 @@ const Success = ({ navbar2bool }) => {
       ".buttonref",
       {
         x: -250,
-
       },
       {
         ease: "back.out(1)",
         delay: 0.35,
-        duration : 0.7,
+        duration: 0.7,
         x: 0,
       }
     );
   }, []);
+  const dispatch = useDispatch();
+
   return (
     <div
       className={` bg-[#1C1D20] ${
@@ -55,6 +58,7 @@ const Success = ({ navbar2bool }) => {
               transform: `translate(${xPos}px, ${yPos}px)`,
             }}
             onClick={() => {
+              dispatch(setsuccessbooleen(true));
               navigateTo("/");
             }}
           >

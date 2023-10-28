@@ -35,6 +35,7 @@ function App() {
   const [scrollyvalue, setscrollyvalue] = useState(0);
   const [navbar2bool, setnavbar2bool] = useState(false);
   const hoverbooleen = useSelector((state) => state.hoverbooleen.value);
+  const successbooleen = useSelector((state) => state.successbooleen.value);
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setscrollyvalue(window.scrollY);
@@ -83,11 +84,7 @@ function App() {
       >
         <FontAwesomeIcon icon={faArrowUp} />
       </button>
-      {/* ${
-            scrollyvalue >= 2384
-              ? "bg-transparent hover:border text-white"
-              : " text-white"
-          } */}
+
       <button
         onClick={() => {
           setnavbar2bool(!navbar2bool);
@@ -159,7 +156,13 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route
             path="/success"
-            element={<Success navbar2bool={navbar2bool} />}
+            element={
+              successbooleen ? (
+                <Success navbar2bool={navbar2bool} />
+              ) : (
+                <Notfound />
+              )
+            }
           />
           <Route path="/*" element={<Notfound />} />
         </Routes>
