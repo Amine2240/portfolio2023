@@ -43,9 +43,9 @@ const Success = ({ navbar2bool }) => {
       <div className=" w-[80%] mx-auto h-[70vh] flex flex-col md:place-content-end place-content-around sm:mb-20 mb-10">
         <div className=" flex md:place-content-around items-center flex-wrap">
           <p className=" capitalize md:text-8xl text-6xl mb-16 md:mb-5">
-            success. <br /> message sent!
+            failed. <br /> Page not found!
           </p>
-          <p className=" text-xl">I will contact you as soon as possible</p>
+          <p className=" text-xl"></p>
         </div>
         <section className=" relative flex place-content-end">
           <button
@@ -69,3 +69,4 @@ const Success = ({ navbar2bool }) => {
 };
 
 export default Transition(Success);
+

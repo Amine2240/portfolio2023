@@ -9,6 +9,8 @@ import figma from "../assets/tools/icons8-figma-480.png";
 import flutter from "../assets/tools/icons8-flutter-480.png";
 import dart from "../assets/tools/icons8-dart-480.png";
 import express from "../assets/tools/icons8-express-js-480.png";
+import github from "../assets/tools/icons8-github-480.png";
+import git from "../assets/tools/icons8-git-480.png";
 import { useRef } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 
@@ -24,6 +26,8 @@ const Toolscomponent = () => {
   const skillref8 = useRef();
   const skillref9 = useRef();
   const skillref10 = useRef();
+  const skillref11 = useRef();
+  const skillref12 = useRef();
   const toolslist = [
     {
       image: figma,
@@ -81,6 +85,17 @@ const Toolscomponent = () => {
       name: "dart",
       reference: skillref10,
     },
+
+    {
+      image: github,
+      name: "github",
+      reference: skillref11,
+    },
+    {
+      image: git,
+      name: "git",
+      reference: skillref12,
+    },
   ];
 
   const targetRef = useRef(null);
@@ -91,7 +106,7 @@ const Toolscomponent = () => {
   const x = useTransform(
     scrollYProgress,
     [0, 1],
-    ["1%", window.innerWidth > 768 ? "-67%" : "-88%"]
+    ["1%", window.innerWidth > 768 ? "-72%" : "-90%"]
   );
   // console.log("scrollyprogess", scrollYProgress);
   // console.log("x", x);

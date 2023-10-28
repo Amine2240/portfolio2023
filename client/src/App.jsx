@@ -23,6 +23,7 @@ const Work = lazy(() => import("./pages/work"));
 const About = lazy(() => import("./pages/about"));
 import { hoverfunction } from "./components/hoverfunction";
 import Success from "./pages/success";
+import Notfound from "./pages/notfound";
 // import MouseFollower from "mouse-follower";
 // import gsap from "gsap";
 // // MouseFollower.registerGSAP(gsap);
@@ -156,8 +157,11 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/work" element={<Work />} />
           <Route path="/about" element={<About />} />
-          <Route path="/success" element={<Success navbar2bool={navbar2bool} />} />
-          <Route path="/*" element={<p> page not found</p>} />
+          <Route
+            path="/success"
+            element={<Success navbar2bool={navbar2bool} />}
+          />
+          <Route path="/*" element={<Notfound />} />
         </Routes>
       </AnimatePresence>
     </>
