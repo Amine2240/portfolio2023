@@ -11,9 +11,12 @@ import Transition from "../../transition";
 import { hoverfunction } from "../components/hoverfunction";
 import Contactdetails from "../components/contactdetails";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setsuccessbooleen } from "../redux/successSlice";
 
 const Contact = () => {
   const navigateTo = useNavigate();
+  const dispatch = useDispatch();
   const [clientinfo, setclientinfo] = useState({
     name: "",
     email: "",
@@ -71,6 +74,7 @@ const Contact = () => {
             <form
               onSubmit={(e) => {
                 submitclientinfo(e);
+                dispatch(setsuccessbooleen(true));
                 navigateTo("/success");
               }}
               className="   flex flex-col place-content-between w-full h-[170vh]  p-10"

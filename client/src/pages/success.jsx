@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 import { useDispatch } from "react-redux";
 import { setsuccessbooleen } from "../redux/successSlice";
 // eslint-disable-next-line react/prop-types
-const Success = ({ navbar2bool }) => {
+const Success = () => {
   const button = useRef();
   const [xPos, setxPos] = useState(0);
   const [yPos, setyPos] = useState(0);
@@ -18,7 +18,6 @@ const Success = ({ navbar2bool }) => {
   useEffect(() => {
     hoverfunction(button, setxPos, setyPos);
   }, []);
-  console.log("navbar2", navbar2bool);
   const navigateTo = useNavigate();
 
   useEffect(() => {
@@ -40,7 +39,8 @@ const Success = ({ navbar2bool }) => {
   return (
     <div
       className={` bg-[#1C1D20] ${
-        navbar2bool ? "h-[150vh]" : "h-[100vh]"
+        // navbar2bool ? "h-[150vh]" :
+        "h-[100vh]"
       }   text-white sm:overflow-hidden pt-10`}
     >
       <div className=" w-[80%] mx-auto h-[70vh] flex flex-col md:place-content-end place-content-around sm:mb-20 mb-10">

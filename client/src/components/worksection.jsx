@@ -53,8 +53,8 @@ const Worksection = () => {
           My work during <br /> 1 year of experience
         </p>
         <p className=" w-[400px] font-medium text-[1.5rem] text-gray-800">
-          As a photographer specialised in brand content and events, I cover all
-          your needs and deliver your photos within 48 hours!
+          As a full-stack developer specialised in MERN-stack and flutter, I cover all
+          your needs and deliver them within a short period of time!
         </p>
         <div className=" flex place-content-center w-full flex-wrap">
           <button

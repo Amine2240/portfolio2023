@@ -18,19 +18,29 @@ const About = () => {
   const eticdivref = useRef();
   const dahoudivref = useRef();
   useEffect(() => {
-    gsap.to(dahoudivref.current, {
-      scale: "1.25",
-      duration: 0.3,
-      delay: 0.05,
-      scrollTrigger: {
-        trigger: dahoudivref.current,
-        scrub: 1,
-        start: "top top",
-        end: "bottom top",
+    gsap.fromTo(
+      dahoudivref.current,
+      {
+        // scale: "1",
+        height: "650px",
+        width: "500px",
       },
-    });
+      {
+        // scale: "1.25",
+        height: "750px",
+        width: "600px",
+        scrollTrigger: {
+          trigger: dahoudivref.current,
+          scrub: true,
+          start: "top top",
+          end: "80% 10%",
+        },
+      }
+    );
     gsap.to(eticdivref.current, {
-      scale: "1.25",
+      // scale: "1.25",
+      height: "750px",
+      width: "600px",
       duration: 0.3,
       scrollTrigger: {
         trigger: eticdivref.current,
@@ -47,10 +57,6 @@ const About = () => {
         opacity: 0,
 
         y: 150,
-        // stagger: 0.1,
-        // scrollTrigger: {
-        //   trigger: ".aboutme1",
-        // },
       },
       {
         delay: 0.1,
@@ -68,13 +74,14 @@ const About = () => {
       mytext2.words,
       {
         opacity: 0,
-        delay: 0.2,
-        duration: 0.8,
+
         y: 150,
         // stagger: 0.1,
       },
       {
         y: 0,
+        // delay: 0.05,
+        duration: 0.8,
         opacity: 1,
         scrollTrigger: {
           trigger: ".aboutme2",
@@ -150,7 +157,7 @@ const About = () => {
               src={aminedahou}
               ref={dahoudivref}
               alt=""
-              className=" w-[full]"
+              className=" object-cover"
             />
           </div>
         </div>
@@ -170,7 +177,7 @@ const About = () => {
               src={amineetic1}
               ref={eticdivref}
               alt=""
-              className=" w-[full]"
+              className=" w-[full] object-cover"
             />
           </div>
 
@@ -180,7 +187,7 @@ const About = () => {
                 clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
               }}
             >
-              i am second year esi student passionate{" "}
+              These are my go to tech stack to make any{" "}
             </span>{" "}
             <span
               style={{
@@ -188,7 +195,7 @@ const About = () => {
               }}
             >
               {" "}
-              about every single thing related to tech i{" "}
+              projects happen. I am always eager of learning{" "}
             </span>
             <span
               style={{
@@ -196,7 +203,7 @@ const About = () => {
               }}
             >
               {" "}
-              start working seriously since a year from{" "}
+              more about my current stack, and new{" "}
             </span>
             <span
               style={{
@@ -204,31 +211,7 @@ const About = () => {
               }}
             >
               {" "}
-              now, i have a strong background on web
-            </span>
-            <span
-              style={{
-                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-              }}
-            >
-              {" "}
-              development, the powever of knowing
-            </span>
-            <span
-              style={{
-                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-              }}
-            >
-              {" "}
-              tools and keeping myself updated allows
-            </span>
-            <span
-              style={{
-                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-              }}
-            >
-              {" "}
-              me to offer you a pretty work
+              technologies that could expand my horizons.
             </span>
           </p>
         </div>
