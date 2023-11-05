@@ -12,7 +12,9 @@ const Whoami = () => {
   const [xPos, setxPos] = useState(0);
   const [yPos, setyPos] = useState(0);
   useEffect(() => {
-    hoverfunction(moremebutton, setxPos, setyPos);
+    window.innerWidth > 768
+      ? hoverfunction(moremebutton, setxPos, setyPos)
+      : "";
   }, []);
   useEffect(() => {
     if (window.innerWidth > 768) {

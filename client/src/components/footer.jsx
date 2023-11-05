@@ -172,7 +172,7 @@ const Footer = () => {
               transform: `translate(${xPos2}px, ${yPos2}px)`,
             }}
             ref={contactbutton}
-            className=" refbutton border hover:bg-[#417595] mx-2 sm:h-[100px] h-[70px] w-[450px]    capitalize text-xl font-semibold rounded-full"
+            className=" refbutton border hover:bg-[#0d486c] mx-2 sm:h-[100px] h-[70px] w-[450px]    capitalize text-xl font-semibold rounded-full"
           >
             contact me
           </button>

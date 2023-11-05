@@ -121,7 +121,7 @@ const Toolscomponent = () => {
               return (
                 <>
                   <div
-                    className="section bg-gradient-to-tr from-[#15242ccf] to-[#3f4f7b] xl:w-[400px] xl:h-[400px] w-[380px] h-[380px] mx-2 mb-5 flex flex-col items-center rounded-md"
+                    className="section bg-gradient-to-tr from-black to-[#2e395a] xl:w-[400px] xl:h-[400px] w-[380px] h-[380px] mx-2 mb-5 flex flex-col items-center rounded-md"
                     ref={item.reference}
                     key={i}
                   >
