@@ -18,7 +18,7 @@ const Viewbutton = () => {
         top: y + "px",
         left: x + "px",
         transform: hoverbooleen ? "scale(7)" : "scale(0)",
-        backgroundColor: "red",
+        backgroundColor: "blue",
         zIndex: "50",
         // animationDelay : 3,
         // transform: 'skewY(8)',

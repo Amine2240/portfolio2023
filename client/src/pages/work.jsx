@@ -143,8 +143,8 @@ const Work = () => {
     <ReactLenis root>
       <div className="">
         <div className=" flex flex-col items-center pt-20">
-          <p className=" text-5xl font-semibold text-center capitalize 2xl:text-9xl xl:text-8xl lg:text-7xl tracking-tighter">
-            helping you to achieve smoothy work
+          <p className=" text-5xl font-semibold text-center capitalize 2xl:text-8xl xl:text-8xl lg:text-7xl tracking-tighter">
+          Developing unforgettable digital experiences.
           </p>
           <div className=" mt-12">
             {toggleactions.map((item) => {
