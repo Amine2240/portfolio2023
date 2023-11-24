@@ -9,7 +9,7 @@ const postClientInfo = async (req, res) => {
       service: "gmail",
       auth: {
         user: "kadoumamine@gmail.com",
-        pass: "yeythzuopskivnah",
+        pass: process.env.APPLICATION_PASSWORD,
       },
       tls: {
         rejectUnauthorized: false, // Ignore self-signed certificate
