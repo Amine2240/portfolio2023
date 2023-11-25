@@ -33,23 +33,24 @@ const Whoami = () => {
           },
         }
       );
-    } else {
-      tl.fromTo(
-        moremebutton.current,
-        {
-          y: 0,
-        },
-        {
-          y: -150,
-          scrollTrigger: {
-            trigger: moremebutton.current,
-            start: "top bottom",
-            end: "bottom 50%",
-            scrub: true,
-          },
-        }
-      );
     }
+    // else {
+    //   tl.fromTo(
+    //     moremebutton.current,
+    //     {
+    //       y: 0,
+    //     },
+    //     {
+    //       y: -150,
+    //       scrollTrigger: {
+    //         trigger: moremebutton.current,
+    //         start: "top bottom",
+    //         end: "bottom 50%",
+    //         scrub: true,
+    //       },
+    //     }
+    //   );
+    // }
   }, []);
   useEffect(() => {
     const myresume = new SplitType(".resume");
@@ -141,7 +142,7 @@ const Whoami = () => {
         </p>
         <Link to="/about">
           <button
-            className=" text-lg mt-32 h-[200px] w-[200px] bg-black rounded-full sm:mr-0 mr-10 text-white"
+            className=" text-lg sm:mt-32 sm:mb-0 mb-2 h-[200px] w-[200px] bg-black rounded-full sm:mr-0 mr-10 text-white"
             ref={moremebutton}
             style={{
               transform: `translate(${xPos}px, ${yPos}px)`,
