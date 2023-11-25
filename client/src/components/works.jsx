@@ -41,7 +41,7 @@ export const Works = [
     // reference: workref2,
     image: movieapp,
     title: "movie app",
-    weblink: "sitelink",
+    weblink: "https://movies-clone-745341.netlify.app/",
     year: "2023",
     color: "#294659d3",
     codelink:
@@ -64,7 +64,7 @@ export const Works = [
     // reference: workref4,
     image: realestate,
     title: "real estate",
-    weblink: "sitelink",
+    weblink: "https://real-estate-88851b.netlify.app/",
     year: "2023",
     color: "#884843",
     codelink: "https://github.com/Amine2240/real-estate-app",
