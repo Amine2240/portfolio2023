@@ -111,7 +111,7 @@ const Navbar2 = ({ navbar2bool, setnavbar2bool }) => {
           className="  h-[100vh] w-[650px]  sm:w-[95vw] absolute rounded-t-full z-[-2] top-[48px] sm:top-[400px] sm:left-[750px] left-[250px] -translate-x-1/2 -translate-y-1/2 bgtmp"
           ref={bgtmpref}
         ></section>
-        <ul className=" flex flex-col place-content-around items-center">
+        <ul className=" flex flex-col place-content-around items-center my-auto">
           <li
             onClick={() => {
               setnavbar2bool(false);
@@ -121,10 +121,10 @@ const Navbar2 = ({ navbar2bool, setnavbar2bool }) => {
             style={{
               color: pathname == `/` ? "red" : "white",
             }}
-            className=" capitalize navref0  mytext   font-bold hover:text-red-500 group mx-auto  "
+            className=" capitalize navref0  mytext hover:text-red-500 group mx-auto  "
             ref={navref0}
           >
-            <p className="  mylabel cursor-pointer tracking-tighter font-bold    text-8xl">
+            <p className="  mylabel cursor-pointer tracking-tighter font-medium    sm:text-8xl text-6xl">
               home
             </p>
             <div className=" h-1 w-0 rounded-full bg-white group-hover:w-full transition-all duration-150"></div>
@@ -140,16 +140,16 @@ const Navbar2 = ({ navbar2bool, setnavbar2bool }) => {
                   style={{
                     color: pathname == `/${item.name}` ? "red" : "white",
                   }}
-                  className=" capitalize navref0  mytext   font-bold group"
+                  className=" capitalize navref0  mytext group"
                   ref={item.reference}
                   key={item.id}
                 >
                   <p
-                    className={`mylabel cursor-pointer tracking-tighter font-bold text-8xl hover:text-red-500 `}
+                    className={`mylabel cursor-pointer tracking-tighter font-medium sm:text-8xl text-6xl hover:text-red-500 `}
                   >
                     {item.name}
                   </p>
-                  <div className=" h-1 w-0 rounded-full bg-white group-hover:w-full transition-all duration-300 mx-auto"></div>
+                  {/* <div className=" h-1 w-0 rounded-full bg-white group-hover:w-full transition-all duration-300 mx-auto"></div> */}
                 </li>
               </>
             );

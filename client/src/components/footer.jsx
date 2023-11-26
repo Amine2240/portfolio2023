@@ -152,14 +152,14 @@ const Footer = () => {
           />
         </svg>
 
-        <div className="flex  place-content-center flex-wrap h-[200px]">
-          <a href="mailto:kadoumamine@gmail.com">
+        <div className="flex  place-content-center  flex-wrap h-[200px]">
+          <a href="mailto:kadoumamine@gmail.com" className=" w-[380px]">
             <button
               style={{
                 transform: `translate(${xPos}px, ${yPos}px)`,
               }}
               ref={emailbutton}
-              className=" refbutton border hover:bg-[] mx-2 sm:h-[100px] h-[70px] w-[450px]  capitalize text-xl font-semibold  rounded-full mb-3 sm:mb-0"
+              className=" refbutton border hover:bg-[#0d486c] mx-2 sm:h-[100px] h-[70px] w-full  capitalize text-xl font-semibold  rounded-full mb-3 sm:mb-0"
             >
               email me{" "}
             </button>
@@ -172,7 +172,7 @@ const Footer = () => {
               transform: `translate(${xPos2}px, ${yPos2}px)`,
             }}
             ref={contactbutton}
-            className=" refbutton border hover:bg-[#0d486c] mx-2 sm:h-[100px] h-[70px] w-[450px]    capitalize text-xl font-semibold rounded-full"
+            className=" refbutton border hover:bg-[#0d486c] mx-2 sm:h-[100px] h-[70px] w-[450px]    capitalize text-xl font-semibold rounded-full ml-5"
           >
             contact me
           </button>

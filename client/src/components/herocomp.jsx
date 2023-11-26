@@ -105,15 +105,10 @@ const Herocomp = () => {
         <img
           src={amine1}
           style={{}}
-          className={` z-[0] absolute left-1/2 translate-x-[-52%] top-16 sm:top-0  image sm:w-[490px] w-[450px] transition-all`}
+          className={` z-[0] absolute left-1/2 translate-x-[-52%] top-28 sm:top-0  image sm:w-[490px] w-[450px] transition-all`}
           alt=""
         />
         <div className=" relative flex pb-[40px]  flex-col items-center place-content-end h-[90vh]  ">
-          {/* <p className="iam  absolute top-[230px] left-10 sm:left-[440px]  font-extrabold text-2xl sm:text-8xl z-10">
-            {" "}
-            I am{" "}
-          </p> */}
-
           <a href="mailto:kadoumamine@gmail.com">
             <button
               style={{
@@ -130,20 +125,13 @@ const Herocomp = () => {
             {time}
             <span className=" tracking-tighter"> GMT+1</span>{" "}
           </p>
-          <p className="capitalize font-semibold xl:text-[7em] md:text-[5em] text-[55px] z-10 name">
+          <p className="capitalize font-semibold xl:text-[7em] md:text-[5em] sm:text-[4em] text-[50px] z-10 name">
             {" "}
-            <span className="amin">AMIN</span>
-            <span className=" ka">E KAD</span>
-            <span className=" oum">OUM</span>{" "}
+            AMINE KADOUM
           </p>
-          <p className=" text-white  font-semibold xl:text-[6em] md:text-[4em] z-10 skill tracking-tighter text-4xl sm:w-fit mx-auto mb-10">
-            <span className=" uppercase  fullst">full-st</span>
-            <span className=" uppercase  ack">ack dev</span>
-            <span className=" uppercase eloper">eloper</span>
+          <p className=" text-white  font-semibold xl:text-[6em] md:text-[4em] z-10 skill tracking-tighter text-[30px] sm:w-fit mx-auto sm:mb-10 mb-40">
+            FULL-STACK DEVELOPER
           </p>
-          {/* <button className=" text-white capitalize border h-12 w-36 mt-5">
-            hire me
-          </button> */}
         </div>
       </div>
     </div>

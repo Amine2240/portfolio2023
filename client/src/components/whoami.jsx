@@ -97,7 +97,7 @@ const Whoami = () => {
       </p>
       <div className=" flex sm:place-content-around place-content-center h-[200px] items-center flex-wrap flex-row-reverse  mt-40 sm:mt-0">
         <p
-          className="text-2xl  sm:w-[500px] w-[480px]  resume font-medium sm:mt-0 mt-20"
+          className="text-2xl  sm:w-[500px] w-[380px]  resume font-medium sm:mt-0 mt-20"
           ref={resumeref}
         >
           <span

@@ -39,7 +39,7 @@ const Worksection = () => {
   }, []);
   return (
     <div
-      className=" flex place-content-around flex-wrap items-start  mt-28  h-fit mb-10"
+      className=" flex place-content-around flex-wrap items-start  mt-44  h-fit mb-10"
       ref={workdiv}
     >
       <div
