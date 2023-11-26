@@ -129,7 +129,7 @@ const Herocomp = () => {
             {" "}
             AMINE KADOUM
           </p>
-          <p className=" text-white  font-semibold xl:text-[6em] md:text-[4em] z-10 skill tracking-tighter text-[30px] sm:w-fit mx-auto sm:mb-10 mb-40">
+          <p className=" text-white  font-semibold xl:text-[6em] md:text-[4em] z-10 skill tracking-tighter text-[30px] sm:w-fit mx-auto sm:mb-[-40px] mb-40">
             FULL-STACK DEVELOPER
           </p>
         </div>
