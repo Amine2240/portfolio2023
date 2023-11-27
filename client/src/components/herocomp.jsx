@@ -29,9 +29,9 @@ const Herocomp = () => {
   useEffect(() => {
     gsap.fromTo(
       heroref.current,
-      { height: 740 },
+      { height: window.innerWidth >= 768 ? "105vh" : "80vh" },
       {
-        height: 610,
+        height: window.innerWidth >= 768 ? "90vh" : "70vh",
         scrollTrigger: {
           trigger: heroref.current,
           start: "center 40%",
@@ -105,7 +105,7 @@ const Herocomp = () => {
         <img
           src={amine1}
           style={{}}
-          className={` z-[0] absolute left-1/2 translate-x-[-52%] top-28 sm:top-0  image sm:w-[490px] w-[450px] transition-all`}
+          className={` z-[0] absolute left-1/2 translate-x-[-52%] bottom-0 xl:top-10  image sm:w-[490px] w-[450px] transition-all`}
           alt=""
         />
         <div className=" relative flex pb-[40px]  flex-col items-center place-content-end h-[90vh]  ">
@@ -120,16 +120,16 @@ const Herocomp = () => {
               <p className=" z-30">Lets Work</p>
             </button>
           </a>
-          <p className="absolute capitalize sm:top-[200px] top-[190px] left-4 xl:left-[400px] md:left-[150px] text-xl sm:text-2xl z-10 time text-white">
+          <p className="absolute capitalize top-[190px] left-4 xl:left-[400px] md:left-[150px] text-xl sm:text-2xl z-10 time text-white">
             local time <br />
             {time}
             <span className=" tracking-tighter"> GMT+1</span>{" "}
           </p>
-          <p className="capitalize font-semibold xl:text-[7em] md:text-[5em] sm:text-[4em] text-[50px] z-10 name">
+          <p className="capitalize font-semibold xl:text-[7em] md:text-[5em] sm:text-[4em] text-[40px] z-10 name">
             {" "}
             AMINE KADOUM
           </p>
-          <p className=" text-white  font-semibold xl:text-[6em] md:text-[4em] z-10 skill tracking-tighter text-[30px] sm:w-fit mx-auto sm:mb-[-40px] mb-40">
+          <p className=" text-white  font-semibold xl:text-[6em] md:text-[4em] z-10 skill tracking-tighter text-[30px] sm:w-fit mx-auto sm:mb-[-40px] mb-36">
             FULL-STACK DEVELOPER
           </p>
         </div>

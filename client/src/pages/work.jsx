@@ -144,22 +144,23 @@ const Work = () => {
       <div className="">
         <div className=" flex flex-col items-center pt-20">
           <p className=" text-5xl font-semibold text-center capitalize 2xl:text-8xl xl:text-8xl lg:text-7xl tracking-tighter">
-          Developing unforgettable digital experiences.
+            Developing unforgettable digital experiences.
           </p>
           <div className=" mt-12">
             {toggleactions.map((item) => {
               return (
                 <>
                   <button
-                  key={item.id}
+                    key={item.id}
                     onClick={() => {
                       // navigateTo("/contact");
                       setindex(item.id);
                     }}
-                    className="h-[70px] w-[120px] mx-2  rounded-[50px] mb-5 border border-black"
+                    className="sm:h-[70px] sm:w-[120px] h-[50px] w-[100px] mx-2  rounded-[50px] mb-5 border border-black"
                     style={{
                       transform: `translate(${item.x}px, ${item.y}px)`,
-                      backgroundColor: index == item.id ? "black" : "transparent",
+                      backgroundColor:
+                        index == item.id ? "black" : "transparent",
                       color: index == item.id ? "white" : "black",
                     }}
                     ref={item.reference}

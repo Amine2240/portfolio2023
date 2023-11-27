@@ -153,7 +153,11 @@ const Footer = () => {
         </svg>
 
         <div className="flex  place-content-center  flex-wrap h-[200px]">
-          <a href="mailto:kadoumamine@gmail.com" className=" sm:w-[450px] w-[370px]">
+          <a
+            href="mailto:kadoumamine@gmail.com"
+            className=" sm:w-[450px] w-[320px]"
+            //w-[350px]
+          >
             <button
               style={{
                 transform: `translate(${xPos}px, ${yPos}px)`,

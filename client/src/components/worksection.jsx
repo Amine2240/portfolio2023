@@ -52,7 +52,7 @@ const Worksection = () => {
         >
           My work during <br /> 1 year of experience
         </p>
-        <p className=" w-[400px] font-medium text-[1.5rem] text-gray-800">
+        <p className=" sm:w-[400px] w-full font-medium text-[1.5rem] text-gray-800 sm:p-0 px-5">
           As a full-stack developer specialised in MERN-stack and flutter, I cover all
           your needs and deliver them within a short period of time!
         </p>

@@ -9,7 +9,7 @@ const Workschema = ({ item }) => {
     <div>
       <a href={item.weblink} target="_blank">
         <div
-          className={`sm:h-[450px] sm:w-[450px] h-[400px] w-[400px] cursor-pointer group  flex place-content-center items-center px-5 hover:rounded-[20px] transition-all `}
+          className={`sm:h-[450px] sm:w-[450px] h-[380px] w-[350px] cursor-pointer group  flex place-content-center items-center px-5 hover:rounded-[20px] transition-all `}
           // data-cursor-icon='../assets/icons/facebook.png'
           onMouseOver={() => {
             dispatch(sethoverbooleen(true));
