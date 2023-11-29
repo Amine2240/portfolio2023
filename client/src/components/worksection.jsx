@@ -43,7 +43,7 @@ const Worksection = () => {
       ref={workdiv}
     >
       <div
-        className=" sm:w-[500px] w-full flex flex-col items-center xl:sticky top-20 sm:place-content-between place-content-around h-[500px]"
+        className=" sm:w-[500px] w-full flex flex-col items-center  lg:sticky top-20 sm:place-content-between place-content-around h-[500px]"
         ref={worktitle}
       >
         <p
@@ -53,8 +53,8 @@ const Worksection = () => {
           My work during <br /> 1 year of experience
         </p>
         <p className=" sm:w-[400px] w-full font-medium text-[1.5rem] text-gray-800 sm:p-0 px-5">
-          As a full-stack developer specialised in MERN-stack and flutter, I cover all
-          your needs and deliver them within a short period of time!
+          As a full-stack developer specialised in MERN-stack and flutter, I
+          cover all your needs and deliver them within a short period of time!
         </p>
         <div className=" flex place-content-center w-full flex-wrap">
           <button
@@ -84,7 +84,7 @@ const Worksection = () => {
         </div>
       </div>
 
-      <div className=" flex flex-wrap  xl:w-[65%] gap-5 place-content-center w-[100vw] ">
+      <div className=" flex flex-wrap  2xl:w-[65%] xl:w-[50%] lg:w-[40%] gap-5 place-content-center w-[100vw]">
         {homeworks.map((item) => {
           return (
             <>

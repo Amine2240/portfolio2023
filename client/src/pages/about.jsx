@@ -152,7 +152,7 @@ const About = () => {
               me to offer you a pretty work
             </span>
           </p>
-          <div className=" bg-red-500 sm:w-[500px] sm:h-[650px] w-[450px] h-[600px]   overflow-hidden">
+          <div className=" bg-red-500 lg:w-[450px] lg:h-[600px] md:w-[400px] md:h-[550px] sm:w-[350px] sm:h-[500px]  overflow-hidden">
             <img
               src={aminedahou}
               ref={dahoudivref}
@@ -163,7 +163,7 @@ const About = () => {
         </div>
         <div className=" flex flex-wrap-reverse  place-content-around items-center w-[100vw] gap-36 my-20">
           <div
-            className=" bg-red-500 sm:w-[500px] sm:h-[650px] w-[450px] h-[600px] overflow-hidden"
+            className=" bg-red-500 lg:w-[450px] lg:h-[600px] md:w-[400px] md:h-[550px] sm:w-[350px] sm:h-[500px]  overflow-hidden"
 
             // style={{
             //   background: `url(${amineetic1})`,

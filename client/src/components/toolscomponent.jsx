@@ -106,7 +106,16 @@ const Toolscomponent = () => {
   const x = useTransform(
     scrollYProgress,
     [0, 1],
-    ["1%", window.innerWidth > 768 ? "-72%" : "-91%"]
+    [
+      "1%",
+      window.innerWidth > 768
+        ? "-72%"
+        : window.innerWidth > 500
+        ? "-90%"
+        : window.innerWidth > 368
+        ? "-95%"
+        : "-98%",
+    ]
   );
   return (
     <div>
