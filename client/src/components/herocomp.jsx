@@ -107,7 +107,7 @@ const Herocomp = () => {
           style={{}}
           className={` z-[0] absolute left-1/2 translate-x-[-52%] bottom-0 xl:top-10  image xl:w-[490px] md:w-[380px] w-[400px] transition-all`}
           alt=""
-          loading="lazy"
+          loading="eager"
         />
         <div className=" relative flex pb-[40px]  flex-col items-center place-content-end h-[90vh]  ">
           <a href="mailto:kadoumamine@gmail.com">
