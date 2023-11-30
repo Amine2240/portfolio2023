@@ -25,12 +25,14 @@ const Workschema = ({ item }) => {
             src={item.image}
             alt=""
             className=" w-full h-[230px] object-contain group-hover:scale-[1.04] transition-all duration-300"
+            loading="lazy"
           />
           {item.type == "mobile" ? (
             <img
               src={item.image2}
               alt=""
               className=" w-full h-[230px] object-contain group-hover:scale-[1.04] transition-all duration-300"
+              loading="lazy"
             />
           ) : (
             ""

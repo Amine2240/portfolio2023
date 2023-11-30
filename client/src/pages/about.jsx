@@ -158,6 +158,7 @@ const About = () => {
               ref={dahoudivref}
               alt=""
               className=" object-cover"
+              loading="lazy"
             />
           </div>
         </div>
@@ -178,6 +179,7 @@ const About = () => {
               ref={eticdivref}
               alt=""
               className=" w-[full] object-cover"
+              loading="lazy"
             />
           </div>
 
