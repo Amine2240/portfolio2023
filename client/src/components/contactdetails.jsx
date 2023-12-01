@@ -27,7 +27,7 @@ const Contactdetails = () => {
     <>
       <ul
         ref={contactref}
-        className="  flex xl:flex-col xl:h-[600px] md:h-[200px]  place-content-around flex-wrap  xl:fixed sm:top-20 sm:right-0  xl:w-[400px] md:w-full w-[90%]"
+        className="  flex xl:flex-col xl:h-[600px] lg:h-[400px] md:h-[200px]  place-content-around flex-wrap  md:fixed xl:top-20 md:top-32 sm:right-0  xl:w-[30%] md:w-[40%] w-[90%]"
       >
         <div className=" h-28 w-28 mx-auto bg-[#335e79] rounded-full overflow-hidden mb-5">
           <img

@@ -7,7 +7,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import { useEffect, useRef, useState } from "react";
-import amine1 from "../assets/amine01.png";
+import amine1 from "../assets/amine01compressed.png";
 import { hoverfunction } from "./hoverfunction";
 import Minifooter from "./minifooter";
 // import { motion } from "framer-motion";
@@ -60,51 +60,6 @@ const Footer = () => {
     hoverfunction(contactbutton, setxPos2, setyPos2);
   }, [xPos2, yPos2]);
 
-  // useEffect(() => {
-  //   gsap.fromTo(
-  //     ".refbutton",
-  //     {
-  //       y: 20,
-  //       duration: "0.3",
-  //     },
-  //     {
-  //       y: -100,
-  //       stagger: -0.01,
-  //       scrollTrigger: {
-  //         trigger: ".refbutton",
-  //         scrub: 2,
-  //       },
-  //     }
-  //   );
-  //   gsap.fromTo(
-  //     ".reftext",
-  //     {
-  //       y: 20,
-  //       duration: "0.3",
-  //     },
-  //     {
-  //       y: -100,
-  //       scrollTrigger: {
-  //         trigger: ".refbutton",
-  //         scrub: 2,
-  //       },
-  //     }
-  //   );
-  //   gsap.fromTo(
-  //     ".refimg",
-  //     {
-  //       y: 20,
-  //       duration: "0.3",
-  //     },
-  //     {
-  //       y: -100,
-  //       scrollTrigger: {
-  //         trigger: ".refbutton",
-  //         scrub: 2,
-  //       },
-  //     }
-  //   );
-  // }, []);
 
   return (
     <section

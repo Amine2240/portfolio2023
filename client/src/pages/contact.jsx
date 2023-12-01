@@ -70,7 +70,7 @@ const Contact = () => {
           lets work together
         </p>
         <div className=" flex w-full   place-content-between pt-16 flex-wrap-reverse">
-          <div className=" xl:w-[70%]  w-full">
+          <div className=" xl:w-[70%] md:w-[60%]  w-full">
             <form
               onSubmit={(e) => {
                 submitclientinfo(e);
@@ -97,7 +97,7 @@ const Contact = () => {
                 }}
               />
               <label
-                className=" sm:text-4xl text-3xl capitalize font-semibold"
+                className=" sm:text-4xl text-3xl capitalize font-semibold xl:mt-0 mt-10"
                 htmlFor="email"
               >
                 what is your email
@@ -114,7 +114,7 @@ const Contact = () => {
                 }}
               />
               <label
-                className=" sm:text-4xl text-3xl capitalize font-semibold"
+                className=" sm:text-4xl text-3xl capitalize font-semibold xl:mt-0 mt-10"
                 htmlFor="need"
               >
                 what are you looking for?
@@ -133,7 +133,7 @@ const Contact = () => {
               ></textarea>
               <section className=" relative mb-10 z-0">
                 <button
-                  className="  h-[200px] w-[200px] bg-red-500 rounded-full z-30 ml-10 text-2xl"
+                  className="  md:h-[200px] md:w-[200px] h-[180px] w-[180px] bg-red-500 rounded-full z-30 ml-10 text-2xl"
                   ref={button}
                   style={{
                     transform: `translate(${xPos}px, ${yPos}px)`,

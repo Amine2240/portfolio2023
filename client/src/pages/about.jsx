@@ -22,13 +22,13 @@ const About = () => {
       dahoudivref.current,
       {
         // scale: "1",
-        height: "650px",
-        width: "500px",
+        height: "100%",
+        width: "100%",
       },
       {
         // scale: "1.25",
-        height: "750px",
-        width: "600px",
+        height: "115%",
+        width: "115%",
         scrollTrigger: {
           trigger: dahoudivref.current,
           scrub: true,
@@ -37,19 +37,24 @@ const About = () => {
         },
       }
     );
-    gsap.to(eticdivref.current, {
-      // scale: "1.25",
-      height: "750px",
-      width: "600px",
-      duration: 0.3,
-      scrollTrigger: {
-        trigger: eticdivref.current,
-        scrub: 1,
-        start: "top bottom",
-        end: "bottom top",
+    gsap.fromTo(
+      eticdivref.current,
+      {
+        height: "100%",
+        width: "100%",
       },
-    });
-
+      {
+        height: "115%",
+        width: "115%",
+        scrollTrigger: {
+          trigger: eticdivref.current,
+          scrub: true,
+          start: "top 30%",
+          end: "80% 10%",
+          // markers: true,
+        },
+      }
+    );
     const mytext1 = new SplitType(".aboutme1");
     gsap.fromTo(
       mytext1.words,
@@ -152,28 +157,18 @@ const About = () => {
               me to offer you a pretty work
             </span>
           </p>
-          <div className=" bg-red-500 lg:w-[450px] lg:h-[600px] md:w-[400px] md:h-[550px] sm:w-[350px] sm:h-[500px]  overflow-hidden">
+          <div className=" lg:w-[450px] lg:h-[600px] md:w-[400px] md:h-[550px] sm:w-[350px] sm:h-[500px] w-[450px]   overflow-hidden">
             <img
               src={aminedahou}
               ref={dahoudivref}
               alt=""
-              className=" object-cover"
+              className=" w-full object-cover"
               loading="lazy"
             />
           </div>
         </div>
         <div className=" flex flex-wrap-reverse  place-content-around items-center w-[100vw] gap-36 my-20">
-          <div
-            className=" bg-red-500 lg:w-[450px] lg:h-[600px] md:w-[400px] md:h-[550px] sm:w-[350px] sm:h-[500px]  overflow-hidden"
-
-            // style={{
-            //   background: `url(${amineetic1})`,
-            //   backgroundSize: "cover",
-            //   backgroundPosition: "center",
-            //   backgroundAttachment: "fixed",
-            //   backgroundRepeat : 'no-repeat'
-            // }}
-          >
+          <div className=" lg:w-[450px] lg:h-[600px] md:w-[400px] md:h-[550px] sm:w-[350px] sm:h-[500px] w-[450px] overflow-hidden">
             <img
               src={amineetic1}
               ref={eticdivref}
