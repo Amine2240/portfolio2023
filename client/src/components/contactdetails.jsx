@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 import { useRef, useEffect, useState } from "react";
-import amine1 from "../assets/amine01.png";
+import amine1 from "../assets/amine01compressed.webp";
 
 const Contactdetails = () => {
   const contactref = useRef();

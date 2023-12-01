@@ -7,7 +7,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import { useEffect, useRef, useState } from "react";
-import amine1 from "../assets/amine01compressed.png";
+import amine1 from "../assets/amine01compressed.webp";
 import { hoverfunction } from "./hoverfunction";
 import Minifooter from "./minifooter";
 // import { motion } from "framer-motion";
@@ -59,7 +59,6 @@ const Footer = () => {
   useEffect(() => {
     hoverfunction(contactbutton, setxPos2, setyPos2);
   }, [xPos2, yPos2]);
-
 
   return (
     <section

@@ -1,6 +1,6 @@
 import "./herocomp.css";
 // import try2 from "../assets/try22.png";
-import amine1 from "../assets/amine01compressed.png";
+import amine1 from "../assets/amine01compressed.webp";
 // import { useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
