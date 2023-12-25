@@ -5,6 +5,8 @@ import musicapp from "../assets/musicapp.webp";
 import realestate from "../assets/realestate.webp";
 import deliveryapp1 from "../assets/cartmobile.webp";
 import deliveryapp2 from "../assets/itemmobile.webp";
+import chedmed from "../assets/chedmed.png";
+import ccc from "../assets/ccc.png"
 
 // const workref0 = useRef();
 // const workref1 = useRef();
@@ -84,4 +86,24 @@ export const Works = [
     codelink:
       "https://github.com/Amine2240/food_delivery_mobile_app_with_flutter",
   },
+  {
+    id : 6,
+    type  : "web",
+    image:chedmed,
+    title : "chedmed app",
+    weblink : "",
+    year : "2023",
+    color : "#9DD9D2",
+    codelink : "https://github.com/Amine2240/chedmed-front-end.git"
+  },
+  {
+    id : 7,
+    type : 'web',
+    image : ccc,
+    title : "ccc website",
+    weblink : "",
+    year : "2023",
+    color : "#392F5A",
+    codelink : ""
+  }
 ];
