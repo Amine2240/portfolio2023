@@ -6,7 +6,8 @@ import realestate from "../assets/realestate.webp";
 import deliveryapp1 from "../assets/cartmobile.webp";
 import deliveryapp2 from "../assets/itemmobile.webp";
 import chedmed from "../assets/chedmed.png";
-import ccc from "../assets/ccc.png"
+import ccc from "../assets/ccc.png";
+import opensource from "../assets/opensource.webp";
 
 // const workref0 = useRef();
 // const workref1 = useRef();
@@ -87,23 +88,33 @@ export const Works = [
       "https://github.com/Amine2240/food_delivery_mobile_app_with_flutter",
   },
   {
-    id : 6,
-    type  : "web",
-    image:chedmed,
-    title : "chedmed app",
-    weblink : "",
-    year : "2023",
-    color : "#9DD9D2",
-    codelink : "https://github.com/Amine2240/chedmed-front-end.git"
+    id: 6,
+    type: "web",
+    image: chedmed,
+    title: "chedmed app",
+    weblink: "",
+    year: "2023",
+    color: "#9DD9D2",
+    codelink: "https://github.com/Amine2240/chedmed-front-end.git",
   },
   {
-    id : 7,
-    type : 'web',
-    image : ccc,
-    title : "ccc website",
-    weblink : "",
-    year : "2023",
-    color : "#392F5A",
-    codelink : ""
-  }
+    id: 7,
+    type: "web",
+    image: ccc,
+    title: "ccc website",
+    weblink: "",
+    year: "2023",
+    color: "#392F5A",
+    codelink: "",
+  },
+  {
+    id: 8,
+    type: "web",
+    image: opensource,
+    title: "Open Source website",
+    weblink: "https://open-source-day-2023.cse.club/",
+    year: "2024",
+    color: "#392F5A",
+    codelink: "",
+  },
 ];
