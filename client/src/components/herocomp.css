@@ -12,16 +12,17 @@
 @font-face {
   font-family: clash;
   src: url('../assets/fonts/ClashDisplay_Complete/Fonts/Variable/ClashDisplay-Variable.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: poppins;
   src: url('../assets/fonts/Poppins/Poppins-Regular.ttf');
+  font-display: swap;
 }
 
 body {
   font-family: poppins;
-
 }
 
 .letswork {
@@ -122,5 +123,5 @@ body {
 
 .herobg {
   background-color: #294659d3;
-  
+
 }

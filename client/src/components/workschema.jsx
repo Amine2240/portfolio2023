@@ -23,16 +23,21 @@ const Workschema = ({ item }) => {
         >
           <img
             src={item.image}
-            alt=""
-            className=" w-full h-[230px] object-contain group-hover:scale-[1.04] transition-all duration-300"
+            alt="work picture"
+            className=" w-full h-[230px] object-contain group-hover:scale-[1.04] transition-all duration-300 max-w-full"
             loading="lazy"
+            width="300"
+            height="200"
+            
           />
           {item.type == "mobile" ? (
             <img
               src={item.image2}
-              alt=""
-              className=" w-full h-[230px] object-contain group-hover:scale-[1.04] transition-all duration-300"
+              alt="work picture"
+              className=" w-full h-[230px] object-contain group-hover:scale-[1.04] transition-all duration-300 max-w-full"
               loading="lazy"
+              width="300"
+              height="200"
             />
           ) : (
             ""

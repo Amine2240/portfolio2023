@@ -21,7 +21,7 @@ const MenubuttonNav2 = () => {
   }, [scrollyvalue]);
   return (
     <div>
-      <button
+      <div
         onClick={() => {
           setnavbar2bool(!navbar2bool);
         }}
@@ -35,7 +35,7 @@ const MenubuttonNav2 = () => {
           // transform: !navbar2bool && scrollyvalue < 20 ? "scale-0" : "scale-100",
           // top : 'calc(100% -20px)'
         }}
-        className={`  transition-all flex items-center place-content-center gap-[2px] bg-[#1C1D20] border border-gray-700 flex-col z-30 h-[70px] shadow-xl w-[70px] rounded-full text-2xl fixed sm:top-10 sm:right-10 top-8 right-10`}
+        className={` cursor-pointer  transition-all flex items-center place-content-center gap-[2px] bg-[#1C1D20] border border-gray-700 flex-col z-30 h-[70px] shadow-xl w-[70px] rounded-full text-2xl fixed sm:top-10 sm:right-10 top-8 right-10`}
       >
         <span
           className={`${
@@ -49,7 +49,7 @@ const MenubuttonNav2 = () => {
             !navbar2bool ? "" : "rotate-[405deg] "
           } h-[2px] w-[25px] bg-white transition-all duration-[1s]`}
         ></span>
-      </button>
+      </div>
 
       <Navbar2 navbar2bool={navbar2bool} setnavbar2bool={setnavbar2bool} />
     </div>

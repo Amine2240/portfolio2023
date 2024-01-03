@@ -9,6 +9,7 @@ import { hoverfunction } from "./hoverfunction";
 // import { useNavigate } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 // import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 const Herocomp = () => {
   // const mytext = new SplitType(".iam");
   // console.log('my text : ',mytext);
@@ -102,12 +103,17 @@ const Herocomp = () => {
   return (
     <div className=" herobg overflow-hidden relative" ref={heroref}>
       <div className="">
+        <Helmet>
+          <link rel="preload" as="image" href={amine1} />
+        </Helmet>
         <img
           src={amine1}
           style={{}}
-          className={` z-[0] absolute left-1/2 translate-x-[-52%] bottom-0 xl:top-10  image xl:w-[490px] md:w-[380px] w-[400px] transition-all`}
-          alt=""
-          loading="eager"
+          className={` z-[0] absolute left-1/2 translate-x-[-52%] bottom-0 xl:top-10  image xl:w-[490px] md:w-[380px] w-[400px] transition-all max-w-full h-auto`}
+          alt="Amine picture"
+          loading="lazy"
+          width="300"
+          height="200"
         />
         <div className=" relative flex pb-[40px]  flex-col items-center place-content-end h-[90vh]  ">
           <a href="mailto:kadoumamine@gmail.com">

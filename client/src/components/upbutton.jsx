@@ -17,14 +17,14 @@ const Upbutton = () => {
     hoverfunction(upbutton, setxPos2, setyPos2);
   }, []);
   return (
-    <button
+    <div
       onClick={() => {
         window.scrollTo({
           top: 0,
           behavior: "smooth",
         });
       }}
-      className={` text-white  transition-all z-10 h-[70px] shadow-xl w-[70px] rounded-full bg-[#1C1D20] border border-gray-700 text-2xl fixed bottom-10 right-10`}
+      className={` text-white cursor-pointer  transition-all z-10 h-[70px] shadow-xl w-[70px] rounded-full bg-[#1C1D20] border border-gray-700 text-2xl fixed bottom-10 right-10 flex items-center place-content-center`}
       ref={upbutton}
       style={{
         transform: `translate(${xPos2}px, ${yPos2}px) ${
@@ -33,7 +33,7 @@ const Upbutton = () => {
       }}
     >
       <FontAwesomeIcon icon={faArrowUp} />
-    </button>
+    </div>
   );
 };
 
