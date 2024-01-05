@@ -5,10 +5,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
+      /* z-index: 5; */
+      /* overflow: hid; */
+      cursor: auto;
+      overflow-x: hidden;
+      width: 100vw;
+      /* font-family: 'Poppins'; */
     }
   </style>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
@@ -18,6 +25,9 @@
   <link rel="stylesheet" href="./src/components/navbar.css" media="print" onload="this.media='all'">
   <meta name="description"
     content="my name is amine, I am a full stuck developer , I freelance with high quality work, currently studying at ESI algiers.">
+  <script src="
+https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js
+"></script>
 </head>
 
 <body>
