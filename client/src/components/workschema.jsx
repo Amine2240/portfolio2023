@@ -28,6 +28,7 @@ const Workschema = ({ item }) => {
             loading="lazy"
             width="300"
             height="200"
+            // sizes=""
             
           />
           {item.type == "mobile" ? (
