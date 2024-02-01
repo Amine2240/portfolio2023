@@ -172,7 +172,7 @@ const Work = () => {
             })}
           </div>
           <div
-            className="flex flex-wrap place-content-around items-end "
+            className="flex flex-wrap place-content-center gap-28 items-end "
             ref={containerref}
           >
             {workstoappear.map((item) => {
