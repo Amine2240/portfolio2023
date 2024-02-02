@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react/no-unknown-property */
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; 
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import gsap from "gsap";

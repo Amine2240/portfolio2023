@@ -29,10 +29,11 @@ const Contact = () => {
     try {
       e.preventDefault();
       const response = await axios.post(
-        "https://amine-portfolio-backend.onrender.com/client",
+        // "https://amine-portfolio-backend.onrender.com/client",
+         "http://localhost:5000/client",
         clientinfo
       );
-      if (response.status == 200) {
+      if (response.status == 200 && Object.keys(response.data).length != 0) {
         navigateTo("/success");
       } else {
         navigateTo("/fail");
