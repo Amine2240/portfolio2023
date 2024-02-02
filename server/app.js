@@ -22,7 +22,9 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-
+app.get("/", (req, res) => {
+  res.send("server is running");
+});
 app.use("/", clientRoute);
 
 app.listen(5000, () => {

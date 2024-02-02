@@ -11,14 +11,14 @@ import Transition from "../../transition";
 import { hoverfunction } from "../components/hoverfunction";
 import Contactdetails from "../components/contactdetails";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setsuccessbooleen } from "../redux/successSlice";
-import { useSelector } from "react-redux";
+// import { useDispatch } from "react-redux";
+// import { setsuccessbooleen } from "../redux/successSlice";
+// import { useSelector } from "react-redux";
 
 const Contact = () => {
   const navigateTo = useNavigate();
-  const successbooleen = useSelector((state) => state.successbooleen.value);
-  const dispatch = useDispatch();
+  // const successbooleen = useSelector((state) => state.successbooleen.value);
+  // const dispatch = useDispatch();
   const [clientinfo, setclientinfo] = useState({
     name: "",
     email: "",
@@ -38,7 +38,7 @@ const Contact = () => {
         navigateTo("/fail");
       }
       // response.status == 200 && dispatch(setsuccessbooleen(true));
-      console.log("successbooleen", successbooleen);
+      // console.log("successbooleen", successbooleen);
       console.log("response status", response.status);
       console.log("response", response);
     } catch (error) {

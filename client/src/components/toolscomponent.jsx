@@ -139,7 +139,7 @@ const Toolscomponent = () => {
 
         <div className="sticky top-28 flex  items-center overflow-hidden">
           <motion.div style={{ x: x }} className="  flex my-20 w-fit">
-            {toolslist.map((item, i) => {
+            {toolslist.map((item) => {
               return (
                 <div
                   className="section bg-gradient-to-tr from-black to-[#272a30e6] xl:w-[400px] xl:h-[400px] w-[380px] h-[380px] mx-2 mb-5 flex flex-col items-center rounded-md"
