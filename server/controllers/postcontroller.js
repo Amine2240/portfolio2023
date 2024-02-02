@@ -7,15 +7,7 @@ const postClientInfo = async (req, res) => {
     const newclient = new Clientmodel(req.body);
     await newclient.save();
 
-    // const oauth2Client = new google.auth.OAuth2(
-    //   "696577845933-vsbnlsiuup7r8h4eddgvv2s19md73dj9.apps.googleusercontent.com",
-    //   "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",
-    //   "https://developers.google.com/oauthplayground/" // e.g., 'http://localhost:3000/oauth2callback'
-    // );
-    // oauth2Client.setCredentials({
-    //   refresh_token:
-    //     "1//04a0rv73uu17NCgYIARAAGAQSNwF-L9IrK-_IaHKbNxqz7ZaoMqof3oHKiig4iXoCu5CYOIvTkmzAlDY5NVHz77PKBkS8Z2bKLoo",
-    // });
+
     const transporter = await nodemailer.createTransport({
       service: "gmail",
       auth: {
