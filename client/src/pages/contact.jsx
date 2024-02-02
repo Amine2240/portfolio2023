@@ -13,9 +13,11 @@ import Contactdetails from "../components/contactdetails";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setsuccessbooleen } from "../redux/successSlice";
+import { useSelector } from "react-redux";
 
 const Contact = () => {
   const navigateTo = useNavigate();
+  const successbooleen = useSelector((state) => state.successbooleen.value);
   const dispatch = useDispatch();
   const [clientinfo, setclientinfo] = useState({
     name: "",
@@ -30,6 +32,14 @@ const Contact = () => {
         "http://localhost:5000/client",
         clientinfo
       );
+      if (response.status == 200) {
+        navigateTo("/success");
+      } else {
+        navigateTo("/fail");
+      }
+      // response.status == 200 && dispatch(setsuccessbooleen(true));
+      console.log("successbooleen", successbooleen);
+      console.log("response status", response.status);
       console.log("response", response);
     } catch (error) {
       console.log(error);
@@ -74,8 +84,8 @@ const Contact = () => {
             <form
               onSubmit={(e) => {
                 submitclientinfo(e);
-                dispatch(setsuccessbooleen(true));
-                navigateTo("/success");
+
+                // navigateTo(`${successbooleen ? "/success" : "/fail"} `);
               }}
               className="   flex flex-col place-content-between w-full h-[170vh]  p-10"
             >

@@ -36,14 +36,17 @@ const Contactdetails = () => {
             className=" translate-y-1 scale-110 w-full"
           />
         </div>
-        <li className="">
+        <ul className="">
           <span className=" capitalize text-lg text-gray-500">
             contact details
           </span>
           <li className=" flex place-content-between text-2xl  mt-3 sm:mr-3">
-            <p> <a href="mailto:kadoumamine@gmail.com">kadoumamine@gmail.com</a></p>
+            <p>
+              {" "}
+              <a href="mailto:kadoumamine@gmail.com">kadoumamine@gmail.com</a>
+            </p>
           </li>
-        </li>
+        </ul>
         <ul className="">
           <span className=" capitalize text-lg text-gray-500">
             digital spaces

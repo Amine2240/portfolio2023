@@ -1,0 +1,23 @@
+# Logs
+logs
+*.log
+
+# Dependency folders
+node_modules/
+
+# Environment variables
+.env
+
+# Compiled binaries or libraries
+*.dll
+*.exe
+
+# IDE and editor-specific files
+.idea/
+.vscode/
+*.suo
+*.sln
+*.njsproj
+
+# Temporary files
+.DS_Store

@@ -149,25 +149,22 @@ const Work = () => {
           <div className=" mt-12">
             {toggleactions.map((item) => {
               return (
-                <>
-                  <button
-                    key={item.id}
-                    onClick={() => {
-                      // navigateTo("/contact");
-                      setindex(item.id);
-                    }}
-                    className="sm:h-[70px] sm:w-[120px] h-[50px] w-[100px] mx-2  rounded-[50px] mb-5 border border-black"
-                    style={{
-                      transform: `translate(${item.x}px, ${item.y}px)`,
-                      backgroundColor:
-                        index == item.id ? "black" : "transparent",
-                      color: index == item.id ? "white" : "black",
-                    }}
-                    ref={item.reference}
-                  >
-                    {item.para}{" "}
-                  </button>
-                </>
+                <button
+                  key={item.id}
+                  onClick={() => {
+                    // navigateTo("/contact");
+                    setindex(item.id);
+                  }}
+                  className="sm:h-[70px] sm:w-[120px] h-[50px] w-[100px] mx-2  rounded-[50px] mb-5 border border-black"
+                  style={{
+                    transform: `translate(${item.x}px, ${item.y}px)`,
+                    backgroundColor: index == item.id ? "black" : "transparent",
+                    color: index == item.id ? "white" : "black",
+                  }}
+                  ref={item.reference}
+                >
+                  {item.para}{" "}
+                </button>
               );
             })}
           </div>
@@ -177,30 +174,28 @@ const Work = () => {
           >
             {workstoappear.map((item) => {
               return (
-                <>
-                  <motion.div
-                    initial={{
-                      opacity: 0,
-                      translateY: 20,
-                    }}
-                    animate={{
-                      opacity: 1,
-                      translateY: 0,
-                    }}
-                    exit={{
-                      opacity: 0,
-                      translateY: 0,
-                    }}
-                    transition={{
-                      duration: 0.5,
-                    }}
-                    ref={item?.reference}
-                    className=" sm:mb-20 my-10 mywork"
-                    key={item.id}
-                  >
-                    <Workschema item={item} />
-                  </motion.div>
-                </>
+                <motion.div
+                  initial={{
+                    opacity: 0,
+                    translateY: 20,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    translateY: 0,
+                  }}
+                  exit={{
+                    opacity: 0,
+                    translateY: 0,
+                  }}
+                  transition={{
+                    duration: 0.5,
+                  }}
+                  ref={item?.reference}
+                  className=" sm:mb-20 my-10 mywork"
+                  key={item.id}
+                >
+                  <Workschema item={item} />
+                </motion.div>
               );
             })}
           </div>

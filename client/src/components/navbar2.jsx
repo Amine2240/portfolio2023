@@ -131,27 +131,25 @@ const Navbar2 = ({ navbar2bool, setnavbar2bool }) => {
           </li>
           {navelements.map((item) => {
             return (
-              <>
-                <li
-                  onClick={() => {
-                    navigateTo(`${item.link}`);
-                    setnavbar2bool(false);
-                  }}
-                  style={{
-                    color: pathname == `/${item.name}` ? "red" : "white",
-                  }}
-                  className=" capitalize navref0  mytext group"
-                  ref={item.reference}
-                  key={item.id}
+              <li
+                onClick={() => {
+                  navigateTo(`${item.link}`);
+                  setnavbar2bool(false);
+                }}
+                style={{
+                  color: pathname == `/${item.name}` ? "red" : "white",
+                }}
+                className=" capitalize navref0  mytext group"
+                ref={item.reference}
+                key={item.id}
+              >
+                <p
+                  className={`mylabel cursor-pointer tracking-tighter font-medium sm:text-8xl text-6xl hover:text-red-500 `}
                 >
-                  <p
-                    className={`mylabel cursor-pointer tracking-tighter font-medium sm:text-8xl text-6xl hover:text-red-500 `}
-                  >
-                    {item.name}
-                  </p>
-                  {/* <div className=" h-1 w-0 rounded-full bg-white group-hover:w-full transition-all duration-300 mx-auto"></div> */}
-                </li>
-              </>
+                  {item.name}
+                </p>
+                {/* <div className=" h-1 w-0 rounded-full bg-white group-hover:w-full transition-all duration-300 mx-auto"></div> */}
+              </li>
             );
           })}
 

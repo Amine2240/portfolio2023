@@ -87,11 +87,9 @@ const Worksection = () => {
       <div className=" flex flex-wrap  2xl:w-[65%] xl:w-[50%] lg:w-[40%] gap-5 place-content-center w-[100vw]">
         {homeworks.map((item) => {
           return (
-            <>
-              <div ref={item?.reference} className=" m-3">
-                <Workschema item={item} />
-              </div>
-            </>
+            <div key={item.id} ref={item?.reference} className=" m-3">
+              <Workschema item={item} />
+            </div>
           );
         })}
       </div>

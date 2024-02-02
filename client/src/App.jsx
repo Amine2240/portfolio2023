@@ -4,7 +4,7 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 axios.defaults.withCredentials = true;
-import { useSelector } from "react-redux";
+//import { useSelector } from "react-redux";
 import { lazy } from "react";
 const Home = lazy(() => import("./pages/home"));
 const Contact = lazy(() => import("./pages/contact"));
@@ -17,7 +17,7 @@ import Viewbutton from "./components/viewbutton";
 import MenubuttonNav2 from "./components/menubutton&nav2";
 
 function App() {
-  const successbooleen = useSelector((state) => state.successbooleen.value);
+//  const successbooleen = useSelector((state) => state.successbooleen.value);
   const location = useLocation();
 
   return (
@@ -32,10 +32,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/work" element={<Work />} />
           <Route path="/about" element={<About />} />
-          <Route
-            path="/success"
-            element={successbooleen ? <Success /> : <Notfound />}
-          />
+          <Route path="/success" element={<Success />} />
+          <Route path="/fail" element={<Notfound />} />
           <Route path="/*" element={<Notfound />} />
         </Routes>
       </AnimatePresence>

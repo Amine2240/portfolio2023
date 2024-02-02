@@ -8,7 +8,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 // eslint-disable-next-line react/prop-types
-const Success = ({ navbar2bool }) => {
+const Notfound = ({ navbar2bool }) => {
   const button = useRef();
   const [xPos, setxPos] = useState(0);
   const [yPos, setyPos] = useState(0);
@@ -68,5 +68,5 @@ const Success = ({ navbar2bool }) => {
   );
 };
 
-export default Transition(Success);
+export default Transition(Notfound);
 

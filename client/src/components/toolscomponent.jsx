@@ -30,68 +30,81 @@ const Toolscomponent = () => {
   const skillref12 = useRef();
   const toolslist = [
     {
+      id: 0,
       image: figma,
       name: "figma",
       reference: skillref0,
     },
 
     {
+      id: 1,
       image: html,
       name: "html",
       reference: skillref1,
     },
     {
+      id: 2,
       image: css,
       name: "css",
       reference: skillref2,
     },
     {
+      id: 3,
       image: js,
       name: "javascript",
       reference: skillref3,
     },
     {
+      id: 4,
       image: react,
       name: "reactjs",
       reference: skillref4,
     },
     {
+      id: 5,
       image: tailwind,
       name: "tailwlindcss",
       reference: skillref5,
     },
     {
+      id: 6,
       image: node,
       name: "nodejs",
       reference: skillref6,
     },
     {
+      id: 7,
       image: mongodb,
       name: "mongodb",
       reference: skillref7,
     },
     {
+      id: 8,
       image: express,
       name: "expressjs",
       reference: skillref8,
     },
     {
+      id: 9,
       image: flutter,
       name: "flutter",
       reference: skillref9,
     },
     {
+      id: 10,
       image: dart,
       name: "dart",
       reference: skillref10,
     },
 
     {
+      id: 11,
       image: github,
       name: "github",
       reference: skillref11,
     },
     {
+      id: 12,
       image: git,
       name: "git",
       reference: skillref12,
@@ -128,20 +141,16 @@ const Toolscomponent = () => {
           <motion.div style={{ x: x }} className="  flex my-20 w-fit">
             {toolslist.map((item, i) => {
               return (
-                <>
-                  <div
-                    className="section bg-gradient-to-tr from-black to-[#272a30e6] xl:w-[400px] xl:h-[400px] w-[380px] h-[380px] mx-2 mb-5 flex flex-col items-center rounded-md"
-                    ref={item.reference}
-                    key={i}
-                  >
-                    <div className=" w-[300px] h-[300px] ml-5">
-                      <img src={item.image} alt="" className=" w-[90%]" />
-                    </div>
-                    <p className=" text-3xl text-white capitalize">
-                      {item.name}
-                    </p>
+                <div
+                  className="section bg-gradient-to-tr from-black to-[#272a30e6] xl:w-[400px] xl:h-[400px] w-[380px] h-[380px] mx-2 mb-5 flex flex-col items-center rounded-md"
+                  ref={item.reference}
+                  key={item.id}
+                >
+                  <div className=" w-[300px] h-[300px] ml-5">
+                    <img src={item.image} alt="" className=" w-[90%]" />
                   </div>
-                </>
+                  <p className=" text-3xl text-white capitalize">{item.name}</p>
+                </div>
               );
             })}
           </motion.div>

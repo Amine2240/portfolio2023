@@ -29,7 +29,7 @@ const postClientInfo = async (req, res) => {
         console.log("email sent :", info.response);
       }
     });
-    return res.json(req.body);
+    return res.status(200).json(req.body);
   } catch (error) {
     return res.json(error);
   }
