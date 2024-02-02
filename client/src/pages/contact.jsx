@@ -29,7 +29,7 @@ const Contact = () => {
     try {
       e.preventDefault();
       const response = await axios.post(
-        "http://localhost:5000/client",
+        "https://amine-portfolio-backend.onrender.com/client",
         clientinfo
       );
       if (response.status == 200) {
