@@ -22,6 +22,7 @@ const Work = () => {
   // const worklist = [workref0, workref1, workref2, workref3, workref4, workref5];
 
   const [allworks, setallworks] = useState([]);
+  //if we want to use the works from the front we replace [] by works that are imported and delete getallworks function 
   const getallworksfromdb = async () => {
     try {
       const response = await axios.get("http://localhost:5000/api/getallworks");

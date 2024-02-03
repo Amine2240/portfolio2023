@@ -6,7 +6,8 @@ const getallworks = async (req, res) => {
     if (!allworks) {
       return res.json("no item found");
     }
-    return res.json(allworks);
+    res.send(allworks);
+    // return res.json(allworks);
   } catch (error) {
     return res.json(error);
   }
