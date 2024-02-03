@@ -6,20 +6,35 @@ gsap.registerPlugin(ScrollTrigger);
 import { useEffect, useRef, useState } from "react";
 import Footer from "../components/footer";
 import Transition from "../../transition";
-import { Works } from "../components/works";
+// import { Works } from "../components/works";
 import { hoverfunction } from "../components/hoverfunction";
 import { motion } from "framer-motion";
 import Workschema from "../components/workschema";
+import axios from "axios";
 
 const Work = () => {
-  const workref0 = useRef();
-  const workref1 = useRef();
-  const workref2 = useRef();
-  const workref3 = useRef();
-  const workref4 = useRef();
-  const workref5 = useRef();
-  const worklist = [workref0, workref1, workref2, workref3, workref4, workref5];
-  const [allworks, setallworks] = useState(Works);
+  // const workref0 = useRef();
+  // const workref1 = useRef();
+  // const workref2 = useRef();
+  // const workref3 = useRef();
+  // const workref4 = useRef();
+  // const workref5 = useRef();
+  // const worklist = [workref0, workref1, workref2, workref3, workref4, workref5];
+
+  const [allworks, setallworks] = useState([]);
+  const getallworksfromdb = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/api/getallworks");
+      console.log("response after getting : ", response.data);
+      setallworks(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getallworksfromdb();
+  }, []);
 
   const [index, setindex] = useState(0);
   const action0 = useRef();
@@ -61,16 +76,16 @@ const Work = () => {
       sety: setyPos2,
     },
   ];
+
   const [webworks, setwebworks] = useState(allworks);
   const [mobileworks, setmobileworks] = useState(allworks);
   useEffect(() => {
-    setallworks(
-      allworks.map((item, i) => {
-        return { ...item, reference: worklist[i] };
-      })
-    );
-    // setwebworks(allworks.slice(0, 5));
-    // setmobileworks(allworks.slice(5, 6));
+    // setallworks(
+    //   allworks.map((item, i) => {
+    //     return { ...item, reference: worklist[i] };
+    //   })
+    // );
+
     setwebworks(
       allworks.filter((item) => {
         return item.type == "web";
@@ -81,7 +96,7 @@ const Work = () => {
         return item.type == "mobile";
       })
     );
-  }, []);
+  }, [allworks]);
   const [workstoappear, setworkstoappear] = useState([]);
 
   const workstoappearfunction = () => {
@@ -97,7 +112,7 @@ const Work = () => {
   };
   useEffect(() => {
     workstoappearfunction();
-  }, [index]);
+  }, [index, allworks]);
 
   const containerref = useRef();
   const visitref = useRef();

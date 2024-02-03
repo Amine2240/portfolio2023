@@ -145,7 +145,7 @@ const works = [
     year: "2023",
     color: "rgb(234, 154, 39)",
     resumecolor: "rgb(234, 154, 39,0.8)",
-    codelink: "https://github.com/Amine2240/business-cart-react", 
+    codelink: "https://github.com/Amine2240/business-cart-react",
   },
 ];
 

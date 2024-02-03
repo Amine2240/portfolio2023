@@ -13,13 +13,21 @@ const saveworkscontroller = async (req, res) => {
     for (const item of works) {
       try {
         // Check if the work already exists in the database
-        const existingWork = await Workmodel.findOne({ title: item.title });
+        const existingWork = await Workmodel.findOne({ id: item.id });
 
         if (!existingWork) {
           const result = await cloudinary.uploader.upload(item.image);
-          const newitem = { ...item, image: result.url };
+
+          let newitem = { ...item, image: result.url };
+
+          if (item.type == "mobile") {
+            const result2 = await cloudinary.uploader.upload(item.image2);
+            const newitem2 = { ...newitem, image2: result2.url };
+            newitem = newitem2;
+          }
           const newwork = new Workmodel(newitem);
           await newwork.save();
+
           console.log(newitem);
         }
       } catch (error) {
