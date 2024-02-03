@@ -6,11 +6,12 @@ gsap.registerPlugin(ScrollTrigger);
 import { useEffect, useRef, useState } from "react";
 import Footer from "../components/footer";
 import Transition from "../../transition";
-// import { Works } from "../components/works";
+import { Works } from "../components/works";
 import { hoverfunction } from "../components/hoverfunction";
 import { motion } from "framer-motion";
 import Workschema from "../components/workschema";
-import axios from "axios";
+// import works from "../../../server/works";
+// import axios from "axios";
 
 const Work = () => {
   // const workref0 = useRef();
@@ -21,21 +22,21 @@ const Work = () => {
   // const workref5 = useRef();
   // const worklist = [workref0, workref1, workref2, workref3, workref4, workref5];
 
-  const [allworks, setallworks] = useState([]);
+  const [allworks, setallworks] = useState(Works);
   //if we want to use the works from the front we replace [] by works that are imported and delete getallworks function 
-  const getallworksfromdb = async () => {
-    try {
-      const response = await axios.get("http://localhost:5000/api/getallworks");
-      console.log("response after getting : ", response.data);
-      setallworks(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const getallworksfromdb = async () => {
+  //   try {
+  //     const response = await axios.get("http://localhost:5000/api/getallworks");
+  //     console.log("response after getting : ", response.data);
+  //     setallworks(response.data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  useEffect(() => {
-    getallworksfromdb();
-  }, []);
+  // useEffect(() => {
+  //   getallworksfromdb();
+  // }, []);
 
   const [index, setindex] = useState(0);
   const action0 = useRef();
@@ -86,6 +87,7 @@ const Work = () => {
     //     return { ...item, reference: worklist[i] };
     //   })
     // );
+  
 
     setwebworks(
       allworks.filter((item) => {
