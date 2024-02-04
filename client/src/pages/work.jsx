@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/jsx-no-target-blank */
 import { ReactLenis } from "@studio-freight/react-lenis";
 import gsap from "gsap";
@@ -13,6 +14,7 @@ import Workschema from "../components/workschema";
 // import works from "../../../server/works";
 // import axios from "axios";
 
+// eslint-disable-next-line react-refresh/only-export-components
 const Work = () => {
   // const workref0 = useRef();
   // const workref1 = useRef();
