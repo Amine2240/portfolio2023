@@ -207,7 +207,7 @@ const Toolscomponent = () => {
                 className={`${item.id == 0 ? "xl:ml-5 md:ml-12 " : "0"}`}
               >
                 <div
-                  className="section bg-gradient-to-tr from-black to-[#272a30e6] lg:w-[450px] lg:h-[450px] md:w-[380px] md:h-[380px] w-[350px] h-[350px] mx-2 mb-5 flex flex-col items-center rounded-md place-content-center"
+                  className="section bg-gradient-to-tr from-black to-[#272a30e6] xl:w-[435px] xl:h-[435px] lg:w-[450px] lg:h-[450px] md:w-[380px] md:h-[380px] w-[350px] h-[350px] mx-2 mb-5 flex flex-col items-center rounded-md place-content-center"
                   // ref={item.reference}
                   key={item.id}
                 >
