@@ -28,19 +28,19 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css/bundle";
 
 const Toolscomponent = () => {
-  const skillref0 = useRef();
-  const skillref1 = useRef();
-  const skillref2 = useRef();
-  const skillref3 = useRef();
-  const skillref4 = useRef();
-  const skillref5 = useRef();
-  const skillref6 = useRef();
-  const skillref7 = useRef();
-  const skillref8 = useRef();
-  const skillref9 = useRef();
-  const skillref10 = useRef();
-  const skillref11 = useRef();
-  const skillref12 = useRef();
+  // const skillref0 = useRef();
+  // const skillref1 = useRef();
+  // const skillref2 = useRef();
+  // const skillref3 = useRef();
+  // const skillref4 = useRef();
+  // const skillref5 = useRef();
+  // const skillref6 = useRef();
+  // const skillref7 = useRef();
+  // const skillref8 = useRef();
+  // const skillref9 = useRef();
+  // const skillref10 = useRef();
+  // const skillref11 = useRef();
+  // const skillref12 = useRef();
 
   const rightbutton = useRef();
   const leftbutton = useRef();
@@ -55,81 +55,81 @@ const Toolscomponent = () => {
       id: 0,
       image: figma,
       name: "figma",
-      reference: skillref0,
+      // reference: skillref0,
     },
 
     {
       id: 1,
       image: html,
       name: "html",
-      reference: skillref1,
+      // reference: skillref1,
     },
     {
       id: 2,
       image: css,
       name: "css",
-      reference: skillref2,
+      // reference: skillref2,
     },
     {
       id: 3,
       image: js,
       name: "javascript",
-      reference: skillref3,
+      // reference: skillref3,
     },
     {
       id: 4,
       image: react,
       name: "reactjs",
-      reference: skillref4,
+      // reference: skillref4,
     },
     {
       id: 5,
       image: tailwind,
       name: "tailwlindcss",
-      reference: skillref5,
+      // reference: skillref5,
     },
     {
       id: 6,
       image: node,
       name: "nodejs",
-      reference: skillref6,
+      // reference: skillref6,
     },
     {
       id: 7,
       image: mongodb,
       name: "mongodb",
-      reference: skillref7,
+      // reference: skillref7,
     },
     {
       id: 8,
       image: express,
       name: "expressjs",
-      reference: skillref8,
+      // reference: skillref8,
     },
     {
       id: 9,
       image: flutter,
       name: "flutter",
-      reference: skillref9,
+      // reference: skillref9,
     },
     {
       id: 10,
       image: dart,
       name: "dart",
-      reference: skillref10,
+      // reference: skillref10,
     },
 
     {
       id: 11,
       image: github,
       name: "github",
-      reference: skillref11,
+      // reference: skillref11,
     },
     {
       id: 12,
       image: git,
       name: "git",
-      reference: skillref12,
+      // reference: skillref12,
     },
   ];
 
@@ -158,6 +158,17 @@ const Toolscomponent = () => {
     hoverfunction(rightbutton, setxPosright, setyPosright);
   }, []);
   const swiper = useSwiper();
+
+  const [slidesperview, setslidesperview] = useState(3);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      window.innerWidth > 1300
+        ? setslidesperview(3)
+        : window.innerWidth <= 1300 && window.innerWidth > 700
+        ? setslidesperview(2)
+        : setslidesperview(1);
+    });
+  }, []);
   return (
     <div>
       <div
@@ -170,7 +181,7 @@ const Toolscomponent = () => {
         {/* it was sticky in this div */}
 
         <Swiper
-          slidesPerView={3}
+          slidesPerView={slidesperview}
           spaceBetween={0}
           // slidesPerGroup={3}
           modules={[Navigation, Pagination, Autoplay]}
@@ -191,22 +202,21 @@ const Toolscomponent = () => {
         >
           {toolslist.map((item) => {
             return (
-              <>
-                <SwiperSlide className={`${item.id == 0 ? "ml-5" : "0"}`}>
-                  <div
-                    className="section bg-gradient-to-tr from-black to-[#272a30e6] xl:w-[450px] xl:h-[450px] w-[350px] h-[350px] mx-2 mb-5 flex flex-col items-center rounded-md place-content-center"
-                    ref={item.reference}
-                    key={item.id}
-                  >
-                    <div className=" w-[300px] h-[300px] ml-5">
-                      <img src={item.image} alt="" className=" w-[90%]" />
-                    </div>
-                    <p className=" text-3xl text-white capitalize">
-                      {item.name}
-                    </p>
+              <SwiperSlide
+                key={item.id}
+                className={`${item.id == 0 ? "xl:ml-5 md:ml-12 " : "0"}`}
+              >
+                <div
+                  className="section bg-gradient-to-tr from-black to-[#272a30e6] lg:w-[450px] lg:h-[450px] md:w-[380px] md:h-[380px] w-[350px] h-[350px] mx-2 mb-5 flex flex-col items-center rounded-md place-content-center"
+                  // ref={item.reference}
+                  key={item.id}
+                >
+                  <div className=" w-[300px] h-[300px] ml-5">
+                    <img src={item.image} alt="" className=" w-[90%]" />
                   </div>
-                </SwiperSlide>
-              </>
+                  <p className=" text-3xl text-white capitalize">{item.name}</p>
+                </div>
+              </SwiperSlide>
             );
           })}
         </Swiper>
@@ -218,7 +228,7 @@ const Toolscomponent = () => {
               transform: `translate(${xPos}px, ${yPos}px)`,
             }}
             className=" previousslide w-20 h-20 border-2 border-black rounded-full"
-            onClick={() => swiper.slidePrev()}
+            onClick={() => swiper?.slidePrev()}
           >
             <FontAwesomeIcon icon={faChevronLeft} className=" text-2xl" />
           </button>
@@ -228,7 +238,7 @@ const Toolscomponent = () => {
               transform: `translate(${xPosright}px,${yPosright}px)`,
             }}
             className=" nextslide w-20 h-20 border-2 border-black rounded-full"
-            onClick={() => swiper.slideNext()}
+            onClick={() => swiper?.slideNext()}
           >
             <FontAwesomeIcon icon={faChevronRight} className=" text-2xl" />
           </button>
