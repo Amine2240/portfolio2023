@@ -25,7 +25,7 @@ const Workschema = ({ item }) => {
     <div>
       <a href={item.weblink} target="_blank">
         <div
-          className={`sm:h-[550px] sm:w-[600px] h-[600px] w-[350px] cursor-pointer group  flex place-content-center items-center px-5 hover:rounded-[20px] transition-all relative overflow-hidden`}
+          className={`sm:h-[550px] sm:w-[600px] h-[350px] w-[350px] cursor-pointer group  flex place-content-center items-center px-5 hover:rounded-[20px] transition-all relative overflow-hidden`}
           // data-cursor-icon='../assets/icons/facebook.png'
           onMouseOver={() => {
             dispatch(sethoverbooleen(true));
@@ -63,10 +63,10 @@ const Workschema = ({ item }) => {
               background: item.resumecolor,
               backdropFilter: "blur(5px)",
             }}
-            className={` w-full absolute shadow-2xl h-[300px] bottom-0 rounded-xl transition-all  p-5 flex flex-col place-content-around translate-y-[300px] group-hover:translate-y-0 duration-500  `}
+            className={` w-full absolute shadow-2xl sm:h-[300px] h-[200px] bottom-0 rounded-xl transition-all p-5  flex flex-col place-content-around translate-y-[300px] group-hover:translate-y-0 duration-500  `}
           >
-            <p className=" text-4xl capitalize text-white">{item.title} </p>
-            <p className=" text-white text-lg">{item.resume}</p>
+            <p className=" sm:text-4xl text-xl capitalize text-white">{item.title} </p>
+            <p className=" text-white sm:text-lg text-sm ">{item.resume}</p>
           </div>
         </div>
       </a>
