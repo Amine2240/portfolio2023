@@ -11,6 +11,7 @@ import { Works } from "../components/works";
 import { hoverfunction } from "../components/hoverfunction";
 import { motion } from "framer-motion";
 import Workschema from "../components/workschema";
+
 // import works from "../../../server/works";
 // import axios from "axios";
 
@@ -25,7 +26,7 @@ const Work = () => {
   // const worklist = [workref0, workref1, workref2, workref3, workref4, workref5];
 
   const [allworks, setallworks] = useState(Works);
-  //if we want to use the works from the front we replace [] by works that are imported and delete getallworks function 
+  //if we want to use the works from the front we replace [] by works that are imported and delete getallworks function
   // const getallworksfromdb = async () => {
   //   try {
   //     const response = await axios.get("http://localhost:5000/api/getallworks");
@@ -89,7 +90,6 @@ const Work = () => {
     //     return { ...item, reference: worklist[i] };
     //   })
     // );
-  
 
     setwebworks(
       allworks.filter((item) => {
@@ -169,22 +169,37 @@ const Work = () => {
           <div className=" mt-12">
             {toggleactions.map((item) => {
               return (
-                <button
-                  key={item.id}
-                  onClick={() => {
-                    // navigateTo("/contact");
-                    setindex(item.id);
-                  }}
-                  className="sm:h-[70px] sm:w-[120px] h-[50px] w-[100px] mx-2  rounded-[50px] mb-5 border border-black"
-                  style={{
-                    transform: `translate(${item.x}px, ${item.y}px)`,
-                    backgroundColor: index == item.id ? "black" : "transparent",
-                    color: index == item.id ? "white" : "black",
-                  }}
-                  ref={item.reference}
-                >
-                  {item.para}{" "}
-                </button>
+                <>
+                  <button
+                    key={item.id}
+                    onClick={() => {
+                      // navigateTo("/contact");
+                      setindex(item.id);
+                    }}
+                    className=" capitalize relative sm:h-[70px] sm:w-[120px] h-[50px] w-[100px] mx-2  rounded-[50px] mb-5 border border-black"
+                    style={{
+                      transform: `translate(${item.x}px, ${item.y}px)`,
+                      // backgroundColor: index == item.id ? "black" : "transparent",
+                      color: index == item.id ? "white" : "black",
+                    }}
+                    ref={item.reference}
+                  >
+                    {item.id == index && (
+                      <motion.div
+                        layoutId="tgl-div"
+                        className=" bg-black w-full h-full absolute -z-50 rounded-[50px] top-0"
+                      ></motion.div>
+                    )}
+                    {item.para}{" "}
+                    <p className=" absolute sm:top-3 sm:right-7 top-2 right-4 text-sm">
+                      {item.id == 1
+                        ? `${webworks.length}`
+                        : item.id == 2
+                        ? `${mobileworks.length}`
+                        : ""}{" "}
+                    </p>
+                  </button>
+                </>
               );
             })}
           </div>
@@ -227,7 +242,7 @@ const Work = () => {
           >
             <button
               ref={visitref}
-              className="h-[90px] w-[200px] bg-white text-black border border-black rounded-[50px] mb-10"
+              className=" capitalize h-[80px] w-[200px] bg-white text-black border border-black rounded-[50px] mb-10"
               style={{
                 transform: `translate(${xPos}px, ${yPos}px)`,
               }}
